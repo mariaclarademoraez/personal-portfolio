@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TROCAR: título e descrição do case -->
+  <title>Maria Clara — Case study</title>
+  <meta name="description" content="Case study — contexto, processo, decisões e resultado." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<!--
+  ============================================================
+  TEMPLATE DE CASE STUDY
+  Duplicar este arquivo por projeto (ex: projeto-01.html) e preencher.
+  Ordem dos blocos: título → contexto/problema → processo → decisões → resultado.
+  Só a estrutura por enquanto — nenhum conteúdo real de case aqui.
+  ============================================================
+-->
+
+<body class="bg-paper font-sans text-ink antialiased">
+
+  <!-- NAV — mesmo padrão de 3 pills do index.html.
+       WORK fica ativo: um case pertence à seção Work. -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
+    <nav class="mx-auto flex max-w-editorial items-center justify-between gap-2 sm:gap-4">
+
+      <a href="index.html"
+         class="rounded-full border border-line bg-pill px-5 py-2.5 text-[11px] font-bold uppercase tracking-wide text-ink sm:px-6 sm:py-3 sm:text-sm">
+        MC
+      </a>
+
+      <div class="rounded-full border border-line bg-pill px-5 py-2.5 sm:px-6 sm:py-3">
+        <ul class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wide sm:gap-7 sm:text-sm">
+          <li><a href="index.html" class="text-ink">Work</a></li>
+          <li><a href="writing.html" class="text-ink/40 hover:text-ink">Writing</a></li>
+          <li><a href="about.html" class="text-ink/40 hover:text-ink">About</a></li>
+        </ul>
+      </div>
+
+      <a href="mailto:hello@exemplo.com"
+         class="hidden rounded-full border border-line bg-pill px-6 py-3 text-sm font-bold uppercase tracking-wide text-ink sm:inline-flex">
+        Contact
+      </a>
+
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-editorial px-4 pt-32 sm:px-6 sm:pt-40">
+
+    <!-- ============================================================
+         1. TÍTULO + FICHA TÉCNICA (grid assimétrico 8/4)
+         ============================================================ -->
+    <section class="grid grid-cols-1 gap-10 pb-12 md:grid-cols-12 md:gap-8 sm:pb-16">
+      <div class="md:col-span-8">
+        <!-- TROCAR: nome do projeto -->
+        <h1 class="text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+          Nome do projeto
+        </h1>
+        <!-- TROCAR: uma frase resumindo o case -->
+        <p class="mt-6 max-w-2xl text-xl font-normal leading-[1.35] tracking-tight text-ink/50 sm:text-2xl">
+          Uma linha resumindo o que foi feito e para quem.
+        </p>
+      </div>
+
+      <!-- Ficha técnica. TROCAR: papel, período, time, entregas -->
+      <dl class="grid grid-cols-2 gap-6 self-end text-[11px] font-bold uppercase tracking-wide md:col-span-4 md:grid-cols-1 sm:text-sm">
+        <div>
+          <dt class="text-ink/40">Papel</dt>
+          <dd class="mt-1">Product Design</dd>
+        </div>
+        <div>
+          <dt class="text-ink/40">Período</dt>
+          <dd class="mt-1">2025</dd>
+        </div>
+        <div>
+          <dt class="text-ink/40">Entregas</dt>
+          <dd class="mt-1">Pesquisa, UI, Design System</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============================================================
+         IMAGEM DE ABERTURA — full-bleed (largura total da viewport)
+         TROCAR: <img class="full-bleed aspect-[16/9] w-full object-cover">
+         ============================================================ -->
+    <div class="placeholder-media full-bleed aspect-[4/3] sm:aspect-[16/9]"></div>
+
+    <!-- ============================================================
+         2. CONTEXTO / PROBLEMA
+         Bloco de texto em coluna estreita (leitura), deslocado no grid.
+         ============================================================ -->
+    <section class="grid grid-cols-1 gap-6 py-20 md:grid-cols-12 md:gap-8 sm:py-28">
+      <h2 class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm md:col-span-3">
+        Contexto
+      </h2>
+      <div class="space-y-6 text-xl font-normal leading-[1.45] tracking-tight md:col-span-8 md:col-start-5 sm:text-2xl">
+        <!-- TROCAR: qual era a situação inicial e qual o problema -->
+        <p>
+          Placeholder do contexto: onde o projeto acontecia, quem estava
+          envolvido e qual restrição definia o desafio.
+        </p>
+        <p class="text-ink/50">
+          Placeholder do problema: o que não estava funcionando e por que
+          isso importava para o negócio e para quem usa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Par de imagens — grid assimétrico 7/5.
+         TROCAR: duas <img> com o mesmo aspect-ratio dos placeholders -->
+    <div class="grid grid-cols-1 items-start gap-4 pb-20 md:grid-cols-12 sm:gap-6 sm:pb-28">
+      <div class="placeholder-media aspect-[4/3] w-full rounded-3xl md:col-span-7"></div>
+      <div class="placeholder-media aspect-[4/5] w-full rounded-3xl md:col-span-5"></div>
+    </div>
+
+    <!-- ============================================================
+         3. PROCESSO — BLOCO PRETO separando as seções do case.
+         full-bleed: o preto ocupa a largura total da viewport.
+         ============================================================ -->
+    <section class="full-bleed bg-void py-20 text-white sm:py-28">
+      <div class="mx-auto grid max-w-editorial grid-cols-1 gap-6 px-4 md:grid-cols-12 md:gap-8 sm:px-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-wide text-white/40 sm:text-sm md:col-span-3">
+        Processo
+      </h2>
+      <div class="md:col-span-8 md:col-start-5">
+        <!-- TROCAR: como o trabalho foi conduzido, etapa por etapa -->
+        <p class="text-2xl font-normal leading-[1.35] tracking-tight sm:text-3xl">
+          Placeholder do processo: as etapas percorridas, do levantamento
+          inicial até a validação.
+        </p>
+
+        <!-- Lista de etapas. TROCAR: duplicar/renomear conforme o projeto -->
+        <ol class="mt-10 divide-y divide-white/10 border-t border-white/10">
+          <li class="flex gap-6 py-5">
+            <span class="text-[11px] font-bold uppercase tracking-wide text-white/40 sm:text-sm">01</span>
+            <div>
+              <h3 class="text-base font-bold uppercase tracking-wide sm:text-lg">Pesquisa</h3>
+              <p class="mt-1 text-base leading-relaxed text-white/50">Resumo de uma linha da etapa.</p>
+            </div>
+          </li>
+          <li class="flex gap-6 py-5">
+            <span class="text-[11px] font-bold uppercase tracking-wide text-white/40 sm:text-sm">02</span>
+            <div>
+              <h3 class="text-base font-bold uppercase tracking-wide sm:text-lg">Exploração</h3>
+              <p class="mt-1 text-base leading-relaxed text-white/50">Resumo de uma linha da etapa.</p>
+            </div>
+          </li>
+          <li class="flex gap-6 py-5">
+            <span class="text-[11px] font-bold uppercase tracking-wide text-white/40 sm:text-sm">03</span>
+            <div>
+              <h3 class="text-base font-bold uppercase tracking-wide sm:text-lg">Validação</h3>
+              <p class="mt-1 text-base leading-relaxed text-white/50">Resumo de uma linha da etapa.</p>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Espaço para imagem dentro do bloco preto -->
+        <div class="placeholder-media--dark mt-10 aspect-[16/9] w-full rounded-3xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. DECISÕES — grid de 2 colunas para os trade-offs
+         ============================================================ -->
+    <section class="grid grid-cols-1 gap-6 py-20 md:grid-cols-12 md:gap-8 sm:py-28">
+      <h2 class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm md:col-span-3">
+        Decisões
+      </h2>
+
+      <div class="md:col-span-9">
+        <p class="max-w-3xl text-2xl font-normal leading-[1.35] tracking-tight sm:text-3xl">
+          <!-- TROCAR: a decisão central do projeto e o porquê dela -->
+          Placeholder da decisão principal: o que foi escolhido, o que ficou
+          de fora e qual critério guiou o corte.
+        </p>
+
+        <!-- TROCAR: 1 card por decisão relevante -->
+        <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+          <div class="rounded-3xl border border-line bg-pill p-6 sm:p-8">
+            <h3 class="text-base font-bold uppercase tracking-wide sm:text-lg">Decisão 01</h3>
+            <p class="mt-2 text-base leading-relaxed text-ink/50">
+              Placeholder: o problema específico, a alternativa considerada e o
+              motivo da escolha.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-line bg-pill p-6 sm:p-8">
+            <h3 class="text-base font-bold uppercase tracking-wide sm:text-lg">Decisão 02</h3>
+            <p class="mt-2 text-base leading-relaxed text-ink/50">
+              Placeholder: o problema específico, a alternativa considerada e o
+              motivo da escolha.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Imagem full-bleed entre decisões e resultado -->
+    <div class="placeholder-media full-bleed aspect-[4/3] sm:aspect-[16/9]"></div>
+
+    <!-- ============================================================
+         5. RESULTADO
+         ============================================================ -->
+    <section class="grid grid-cols-1 gap-6 py-20 md:grid-cols-12 md:gap-8 sm:py-28">
+      <h2 class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm md:col-span-3">
+        Resultado
+      </h2>
+      <div class="md:col-span-8 md:col-start-5">
+        <!-- TROCAR: o que mudou depois da entrega -->
+        <p class="text-2xl font-normal leading-[1.35] tracking-tight sm:text-3xl">
+          Placeholder do resultado: o que foi entregue e qual efeito teve.
+        </p>
+
+        <!-- Métricas. TROCAR ou REMOVER se o projeto não tiver número -->
+        <dl class="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-3">
+          <div>
+            <dt class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm">Métrica</dt>
+            <dd class="mt-2 text-3xl font-normal tracking-tight sm:text-4xl">00%</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm">Métrica</dt>
+            <dd class="mt-2 text-3xl font-normal tracking-tight sm:text-4xl">00%</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm">Métrica</dt>
+            <dd class="mt-2 text-3xl font-normal tracking-tight sm:text-4xl">00%</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NAVEGAÇÃO ENTRE CASES — bloco preto de fechamento
+         TROCAR: href e nome do próximo projeto
+         ============================================================ -->
+    <section class="pb-24 sm:pb-32">
+      <a href="project-template.html" class="block rounded-3xl bg-void p-8 text-white sm:p-12">
+        <span class="text-[11px] font-bold uppercase tracking-wide text-white/40 sm:text-sm">Próximo projeto</span>
+        <div class="mt-4 flex items-baseline justify-between gap-6">
+          <h2 class="text-3xl font-bold uppercase leading-none tracking-tight sm:text-5xl">Projeto 02</h2>
+          <span class="text-white/40">↗</span>
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER — mesmo do index.html -->
+  <footer class="mx-auto max-w-editorial px-4 pb-10 sm:px-6 sm:pb-14">
+    <div class="flex flex-col gap-6 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm">
+        © 2026 Maria Clara
+      </p>
+      <ul class="flex items-center gap-6 text-[11px] font-bold uppercase tracking-wide sm:gap-8 sm:text-sm">
+        <li><a href="https://linkedin.com/in/" class="text-ink/40 hover:text-ink">LinkedIn</a></li>
+        <li><a href="mailto:hello@exemplo.com" class="text-ink/40 hover:text-ink">E-mail</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
