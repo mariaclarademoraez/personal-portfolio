@@ -41,8 +41,16 @@ abaixo do breakpoint `sm` para as pills não apertarem em telas estreitas.
 
 ## Estado atual
 
-Só o esqueleto: estrutura, cores e grid. Todo o conteúdo é placeholder —
-procurar por `TROCAR:` nos comentários para achar onde entra o conteúdo real.
+Conteúdo real preenchido em `index.html`, `about.html` e `writing.html`.
+Continua pendente — procurar por `TROCAR:` nos comentários:
 
-Ainda não feito, por decisão: seção PLAY, accent color, conteúdo dos case
-studies, animações.
+- **E-mail e LinkedIn**: todos os links de contato apontam para `#`. São os
+  únicos dados que faltam para o site funcionar de verdade.
+- **Imagens**: os projetos, a foto de perfil e os ícones do stack ainda usam
+  o placeholder listrado.
+- **Case studies**: `project-template.html` segue sendo um molde vazio; os
+  4 cards do index apontam todos para ele.
+- **Writing**: sem textos publicados, a lista virou um estado vazio. O markup
+  da lista está comentado no arquivo, pronto para voltar.
+
+Ainda não feito, por decisão: seção PLAY, accent color, animações.
