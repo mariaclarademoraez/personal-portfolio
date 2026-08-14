@@ -1,0 +1,54 @@
+/*
+  CSS de apoio — só o que o Tailwind não resolve bem inline.
+  Nenhuma animação por enquanto: apenas estrutura, cor e grid.
+*/
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* segura o scroll horizontal criado pelos blocos .full-bleed (100vw) */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+/*
+  Placeholder de imagem.
+  TROCAR DEPOIS: substituir a <div class="placeholder-media"> por uma
+  <img> real (mesmo aspect-ratio) quando o conteúdo estiver pronto.
+*/
+.placeholder-media {
+  background-color: #E6E6E2;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(20, 20, 20, 0.045) 0px,
+    rgba(20, 20, 20, 0.045) 1px,
+    transparent 1px,
+    transparent 9px
+  );
+}
+
+/* Variante do placeholder para uso dentro dos blocos pretos */
+.placeholder-media--dark {
+  background-color: #171717;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 9px
+  );
+}
+
+/*
+  Imagem full-bleed dentro do case study: estoura o container e ocupa
+  a largura total da viewport sem provocar scroll horizontal.
+*/
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
