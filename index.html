@@ -1,162 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- TROCAR: título e descrição reais -->
-  <title>Maria Clara — Work</title>
-  <meta name="description" content="Portfólio pessoal — seleção de trabalhos." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/tailwind-config.js"></script>
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maria Clara Moraes · Product Designer</title>
+<meta name="description" content="Product Designer na Arco Educação. Desenho ferramentas para quem produz educação em escala e uso IA para simplificar o trabalho do time.">
+<meta property="og:title" content="Maria Clara Moraes · Product Designer">
+<meta property="og:description" content="Ferramentas para quem produz educação em escala, com IA no processo de design.">
+<meta property="og:image" content="/assets/media/og.jpg">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
+<body>
+<!-- icons:start -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5c1.3-2.2 3.3-3.3 5.5-3.3s4.2 1.1 5.5 3.3"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-go" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8M13 9l3 3-3 3"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 19c.9-3 3-4.5 5.5-4.5s4.6 1.5 5.5 4.5M15 15c2.4 0 4.3 1.3 5.2 3.8"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3V4z"/><path d="M5 17a3 3 0 013-3h10"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><path d="M3.5 18c.7-2.6 2.4-4 4.5-4s3.8 1.4 4.5 4M11.5 18c.7-2.6 2.4-4 4.5-4s3.8 1.4 4.5 4"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
+</svg>
+<!-- icons:end -->
 
-<body class="bg-paper font-sans text-ink antialiased">
+<header class="top">
+  <nav aria-label="Principal">
+    <a href="/sobre/"><svg class="ico"><use href="#i-user"/></svg>Sobre</a>
+    <a href="/#trabalho"><svg class="ico"><use href="#i-grid"/></svg>Trabalho</a>
+  </nav>
+</header>
 
-  <!-- ============================================================
-       NAV — padrão de 3 pills separadas (elemento mais característico)
-       1. esquerda: nome/logo  2. centro: menu  3. direita: CTA
-       Repetir este bloco igual em todas as páginas.
-       ============================================================ -->
-  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
-    <nav class="mx-auto flex max-w-editorial items-center justify-between gap-2 sm:gap-4">
+<main class="wrap">
+  <section class="hero" aria-labelledby="nome">
+    <div class="hero-in">
+      <h1 class="name rise" id="nome">Maria Clara Moraes</h1>
+      <p class="role rise d1">Product Designer</p>
+      <p class="mission rise d2">Desenho ferramentas para quem produz educação em escala, e uso IA para deixar o trabalho do time mais simples, claro e confiável.</p>
+    </div>
+    <a class="scroll-cue" href="#trabalho" aria-label="Ver trabalhos"><svg class="ico" style="width:22px;height:22px"><use href="#i-down"/></svg></a>
+  </section>
 
-      <!-- Pill 1 — nome/logo. TROCAR: iniciais/logo -->
-      <a href="index.html"
-         class="rounded-full border border-line bg-pill px-5 py-2.5 text-[11px] font-bold uppercase tracking-wide text-ink sm:px-6 sm:py-3 sm:text-sm">
-        MC
-      </a>
-
-      <!-- Pill 2 — menu de navegação. Item ativo em ink, demais em ink/40 -->
-      <div class="rounded-full border border-line bg-pill px-5 py-2.5 sm:px-6 sm:py-3">
-        <ul class="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wide sm:gap-7 sm:text-sm">
-          <li><a href="index.html" class="text-ink">Work</a></li>
-          <li><a href="writing.html" class="text-ink/40 hover:text-ink">Writing</a></li>
-          <li><a href="about.html" class="text-ink/40 hover:text-ink">About</a></li>
-        </ul>
+  <section class="projects" id="trabalho" aria-label="Trabalhos">
+    <article class="project reveal">
+      <div class="project-info">
+        <h2>Nova Gestora de Avaliações</h2>
+        <p class="desc">Reconstrução da ferramenta onde cerca de 4 mil provas são montadas por ano, para que o estado de cada prova fique visível e os erros apareçam onde acontecem.</p>
+        <p class="who">Product Designer · Arco Educação</p>
+        <div class="tags">
+          <span class="tag">Sistema legado</span><span class="tag">Discovery com usuários</span><span class="tag">Arquitetura da informação</span><span class="tag">Validação e regras de negócio</span><span class="tag">Prototipação com IA</span>
+        </div>
+        <a class="pill-btn" href="/gestora-de-avaliacoes/">Ver case <svg class="ico"><use href="#i-go"/></svg></a>
       </div>
-
-      <!-- Pill 3 — destaque/CTA. Escondido no mobile: 3 pills não cabem
-           lado a lado em telas estreitas sem apertar demais o menu. -->
-      <!-- TROCAR: e-mail real -->
-      <a href="mailto:hello@exemplo.com"
-         class="hidden rounded-full border border-line bg-pill px-6 py-3 text-sm font-bold uppercase tracking-wide text-ink sm:inline-flex">
-        Contact
+      <a class="media-card" href="/gestora-de-avaliacoes/" aria-label="Abrir o case da Nova Gestora de Avaliações">
+        <div class="shot"><video src="/assets/media/ga-visao-geral.mp4" poster="/assets/media/ga-visao-geral.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
+        <span class="year">2026</span>
       </a>
+    </article>
 
-    </nav>
-  </header>
-
-  <main class="mx-auto max-w-editorial px-4 pt-32 sm:px-6 sm:pt-40">
-
-    <!-- ============================================================
-         ABERTURA — nome + posicionamento em texto grande (Inter Regular).
-         O peso editorial vem do tamanho, não de uma serifada.
-         ============================================================ -->
-    <section class="max-w-4xl pb-20 sm:pb-28">
-      <!-- TROCAR: nome -->
-      <h1 class="text-[11px] font-bold uppercase tracking-wide sm:text-sm">Maria Clara</h1>
-
-      <!-- TROCAR: 1–2 frases de posicionamento -->
-      <p class="mt-6 text-3xl font-normal leading-[1.15] tracking-tight sm:mt-8 sm:text-5xl lg:text-6xl">
-        Designer trabalhando na fronteira entre design e código.
-        <span class="text-ink/40">
-          Atualmente construindo interfaces e sistemas para produtos digitais.
-        </span>
-      </p>
-    </section>
-
-    <!-- ============================================================
-         GRID DE PROJETOS — assimétrico (7/5 e 5/7 em 12 colunas).
-         4 placeholders. O card 3 usa o bloco preto para quebrar o ritmo.
-         TROCAR: cada card vira link para project-template.html preenchido.
-         ============================================================ -->
-    <section aria-labelledby="work-heading" class="pb-24 sm:pb-32">
-      <h2 id="work-heading" class="mb-6 text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:mb-8 sm:text-sm">
-        Selected Work
-      </h2>
-
-      <div class="grid grid-cols-1 items-start gap-4 sm:gap-6 md:grid-cols-12">
-
-        <!-- Projeto 01 — largo -->
-        <a href="project-template.html"
-           class="group block overflow-hidden rounded-3xl border border-line bg-pill md:col-span-7">
-          <!-- TROCAR: <img> real, mesmo aspect-ratio -->
-          <div class="placeholder-media aspect-[16/11] w-full"></div>
-          <div class="flex items-baseline justify-between gap-4 p-5 sm:p-7">
-            <div>
-              <h3 class="text-lg font-bold uppercase tracking-wide sm:text-xl">Projeto 01</h3>
-              <!-- TROCAR: 1 linha de descrição -->
-              <p class="mt-1.5 text-sm text-ink/50 sm:text-base">Design system e redesign de produto</p>
-            </div>
-            <span class="shrink-0 text-[11px] font-bold uppercase tracking-wide text-ink/40">2025</span>
-          </div>
-        </a>
-
-        <!-- Projeto 02 — estreito e vertical -->
-        <a href="project-template.html"
-           class="group block overflow-hidden rounded-3xl border border-line bg-pill md:col-span-5">
-          <div class="placeholder-media aspect-[4/5] w-full"></div>
-          <div class="flex items-baseline justify-between gap-4 p-5 sm:p-7">
-            <div>
-              <h3 class="text-lg font-bold uppercase tracking-wide sm:text-xl">Projeto 02</h3>
-              <p class="mt-1.5 text-sm text-ink/50 sm:text-base">Identidade visual e site institucional</p>
-            </div>
-            <span class="shrink-0 text-[11px] font-bold uppercase tracking-wide text-ink/40">2025</span>
-          </div>
-        </a>
-
-        <!-- Projeto 03 — BLOCO PRETO (destaque pontual, quebra o ritmo do grid) -->
-        <a href="project-template.html"
-           class="group block overflow-hidden rounded-3xl bg-void text-white md:col-span-5">
-          <div class="placeholder-media--dark aspect-[4/5] w-full"></div>
-          <div class="flex items-baseline justify-between gap-4 p-5 sm:p-7">
-            <div>
-              <h3 class="text-lg font-bold uppercase tracking-wide sm:text-xl">Projeto 03</h3>
-              <p class="mt-1.5 text-sm text-white/50 sm:text-base">Case study em destaque</p>
-            </div>
-            <span class="shrink-0 text-[11px] font-bold uppercase tracking-wide text-white/40">2024</span>
-          </div>
-        </a>
-
-        <!-- Projeto 04 — largo -->
-        <a href="project-template.html"
-           class="group block overflow-hidden rounded-3xl border border-line bg-pill md:col-span-7">
-          <div class="placeholder-media aspect-[16/11] w-full"></div>
-          <div class="flex items-baseline justify-between gap-4 p-5 sm:p-7">
-            <div>
-              <h3 class="text-lg font-bold uppercase tracking-wide sm:text-xl">Projeto 04</h3>
-              <p class="mt-1.5 text-sm text-ink/50 sm:text-base">App mobile — pesquisa e interface</p>
-            </div>
-            <span class="shrink-0 text-[11px] font-bold uppercase tracking-wide text-ink/40">2024</span>
-          </div>
-        </a>
-
+    <article class="project reveal">
+      <div class="project-info">
+        <h2>sabioteca</h2>
+        <p class="desc">Repositório de pesquisa construído sem desenvolvedor e conectado às ferramentas do time. Antes de alguém planejar uma pesquisa, ele mostra o que já se sabe sobre o tema.</p>
+        <p class="who">Concepção e construção · Arco Educação</p>
+        <div class="tags">
+          <span class="tag live">Em andamento</span><span class="tag">Research Ops</span><span class="tag">Ferramenta com IA</span><span class="tag">Definição de escopo</span><span class="tag">Privacidade de participantes</span>
+        </div>
+        <a class="pill-btn" href="/sabioteca/">Ver case <svg class="ico"><use href="#i-go"/></svg></a>
       </div>
-    </section>
+      <a class="media-card ui" href="/sabioteca/" aria-label="Abrir o case da sabioteca">
+        <div class="shot">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-top"><span class="field">Como professores revisam provas antes de imprimir</span><span class="go">Já sabemos isso?</span></div>
+            <div class="mock-line"><span class="k">O que já sabemos</span><span>Professores revisam no PDF final, não na ferramenta. <span class="src">[Síntese · 2025]</span></span></div>
+            <div class="mock-line"><span class="k">O que os dados dizem</span><span>A maioria das revisões acontece nas 48 h antes da impressão. <span class="src">[Painel de uso]</span></span></div>
+            <div class="mock-line"><span class="k">Já foi discutido</span><span>Conferência dentro da ferramenta foi priorizada no trimestre passado. <span class="src">[Canal do time]</span></span></div>
+            <div class="mock-line"><span class="k">Em andamento</span><span>Discovery de conferência de provas, entrevistas em curso.</span></div>
+            <div class="mock-line"><span class="k">Com quem falar</span><span>Designer e PM do squad de montagem.</span></div>
+          </div>
+        </div>
+        <span class="year">2026</span>
+      </a>
+    </article>
+  </section>
 
-  </main>
-
-  <!-- ============================================================
-       FOOTER — simples, só links. Repetir igual nas outras páginas.
-       TROCAR: URLs reais
-       ============================================================ -->
-  <footer class="mx-auto max-w-editorial px-4 pb-10 sm:px-6 sm:pb-14">
-    <div class="flex flex-col gap-6 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-      <p class="text-[11px] font-bold uppercase tracking-wide text-ink/40 sm:text-sm">
-        © 2026 Maria Clara
-      </p>
-      <ul class="flex items-center gap-6 text-[11px] font-bold uppercase tracking-wide sm:gap-8 sm:text-sm">
-        <li><a href="https://linkedin.com/in/" class="text-ink/40 hover:text-ink">LinkedIn</a></li>
-        <li><a href="mailto:hello@exemplo.com" class="text-ink/40 hover:text-ink">E-mail</a></li>
-      </ul>
+  <footer class="foot">
+    <a class="pill-btn dark" href="/sobre/">Sobre mim <svg class="ico"><use href="#i-go"/></svg></a>
+    <div class="lines">
+      <span class="email" id="email">mariaclarademoraez@gmail.com</span>
+      <button class="copy-btn" id="copyEmail" type="button">Copiar e-mail</button>
+      <span>© 2026 Maria Clara Moraes</span>
     </div>
   </footer>
-
+</main>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

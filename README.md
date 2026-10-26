@@ -1,48 +1,43 @@
-# personal-portfolio
+# Portfolio · Maria Clara Moraes
 
-Portfólio pessoal em HTML puro + Tailwind via CDN. Sem framework, sem build step.
+Site estático (HTML, CSS e JS puros, sem build). Publicado na Vercel a partir da branch `main`: cada push vai ao ar sozinho.
 
-## Rodar
+## Estrutura
 
-Abrir `index.html` direto no navegador, ou servir a pasta:
+| Caminho | O que é |
+| --- | --- |
+| `index.html` | Home: apresentação e lista de projetos |
+| `gestora-de-avaliacoes/` | Case da Nova Gestora de Avaliações |
+| `sabioteca/` | Case da sabioteca (em andamento) |
+| `sobre/` | Página Sobre |
+| `assets/site.css` | Todo o visual: cores, tipografia, layout |
+| `assets/site.js` | Interações: antes/depois, ampliar imagem, demo do resumo, raio-x |
+| `assets/media/` | Imagens (.webp) e vídeos (.mp4) dos cases |
+| `partials/icons.svg` | Ícones usados em todas as páginas |
+| `scripts/sync-icons.py` | Copia os ícones para dentro de cada página |
+| `vercel.json` | URLs limpas e cache das mídias |
+
+## Rodar localmente
 
 ```bash
 python3 -m http.server 8000
 ```
 
-## Estrutura
+Depois abra http://localhost:8000.
 
-| Arquivo | O que é |
-| --- | --- |
-| `index.html` | Home / WORK — abertura + grid de projetos |
-| `about.html` | Bio, stack de ferramentas e links |
-| `writing.html` | Lista editorial de artigos |
-| `project-template.html` | Template de case study (duplicar por projeto) |
-| `assets/tailwind-config.js` | Paleta, fonte e escala — config compartilhada do Tailwind |
-| `assets/styles.css` | Placeholders de imagem e helper `full-bleed` |
+## Como adicionar um case novo
 
-## Design
+1. Copie a pasta `sabioteca/` com o nome do novo case.
+2. Troque título, pergunta do topo, tags, seções e mídias.
+3. Adicione um bloco `<article class="project">` em `index.html`.
+4. Se usar um ícone novo, adicione em `partials/icons.svg` e rode `python3 scripts/sync-icons.py`.
 
-Paleta neutra, sem accent color — o contraste vem do jogo preto/branco.
+## Mídias
 
-| Token | Hex | Uso |
-| --- | --- | --- |
-| `paper` | `#F0F0EE` | fundo geral |
-| `pill` | `#FCFCFA` | cápsulas da nav e cards |
-| `ink` | `#141414` | texto principal |
-| `void` | `#0A0A0A` | blocos de destaque (texto branco) |
-| `line` | `#DEDEDA` | contorno fino |
+- Imagens em `.webp`, com no máximo 2000 px de largura.
+- Vídeos em `.mp4` H.264, 1920 px, sem áudio.
+- Antes de publicar uma tela, confira nomes de pessoas, clientes e marcas. As telas antigas da Gestora já estão com nomes de cliente desfocados.
 
-Tipografia: Inter (Google Fonts). Bold + uppercase + `tracking-wide` para
-nome, navegação e títulos; Regular em tamanho grande para bio e aberturas.
+## Visual
 
-Navegação: 3 pills separadas — nome / menu / CTA. O CTA fica escondido
-abaixo do breakpoint `sm` para as pills não apertarem em telas estreitas.
-
-## Estado atual
-
-Só o esqueleto: estrutura, cores e grid. Todo o conteúdo é placeholder —
-procurar por `TROCAR:` nos comentários para achar onde entra o conteúdo real.
-
-Ainda não feito, por decisão: seção PLAY, accent color, conteúdo dos case
-studies, animações.
+Fundo cinza claro, texto em preto e cinzas, sem cor de destaque. Inter no texto e Pixelify Sans só em rótulos pequenos. Os blocos aparecem com animação suave ao rolar, e tudo respeita `prefers-reduced-motion`.
