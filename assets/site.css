@@ -521,3 +521,9 @@ tr.flag td { background: repeating-linear-gradient(45deg, #F0F0F0 0 3px, transpa
   .pm-did li:nth-child(2) { transform: rotate(.8deg); }
 }
 @media (prefers-reduced-motion: reduce) { .flip, .flip-in { transition: none; } }
+.fr-table { margin-top: 8px; font-size: 15px; }
+.fr-table th, .fr-table td { white-space: normal; text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.fr-table th { font-weight: 600; color: var(--ink); }
+.fr-table td:first-child { color: var(--muted); white-space: nowrap; }
+.fr-table td:last-child { color: var(--ink); }
+.meta .todo { margin-top: 6px; }

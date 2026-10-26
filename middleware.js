@@ -2,7 +2,7 @@
 // A senha fica na variável de ambiente CASE_PASSWORD (painel da Vercel), nunca no código.
 
 export const config = {
-  matcher: ['/sabioteca', '/sabioteca/:path*'],
+  matcher: ['/sabioteca', '/sabioteca/:path*', '/financial-resilience', '/financial-resilience/:path*'],
 };
 
 const COOKIE = 'cm_acesso';
