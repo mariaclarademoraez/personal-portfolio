@@ -42,117 +42,93 @@
   </nav>
 </header>
 
-<main>
+<main class="pm">
   <p class="draft-note"><svg class="ico"><use href="#i-lock"/></svg> Rascunho · case em construção</p>
-  <section class="case-head">
-    <span class="badge rise"><svg class="ico"><use href="#i-book"/></svg></span>
-    <p class="eyebrow rise">Pequenas Marés</p>
-    <h1 class="rise d1">Como ajudar uma criança pequena a dar nome ao que sente?</h1>
-    <div class="tags rise d2">
-      <span class="tag">Direção de arte</span><span class="tag">Personagens com IA</span><span class="tag">Diagramação</span><span class="tag">Estudo de materiais</span><span class="tag">Freelance</span>
-    </div>
-    <a class="scroll-cue" href="#intro" aria-label="Ler o case"><svg class="ico" style="width:22px;height:22px"><use href="#i-down"/></svg></a>
+
+  <section class="pm-head">
+    <p class="eyebrow-mono rise">Direção de arte · Freelance · MareAr Consultoria</p>
+    <h1 class="rise d1">Pequenas Marés</h1>
+    <p class="pm-sub rise d2">Um baralho para ajudar crianças pequenas a dar nome ao que sentem.</p>
   </section>
 
-  <div class="case-hero-media rise d3">
+  <div class="pm-hero rise d3">
     <img src="/pequenas-mares/m/pm-capa.webp" width="2400" height="1500" alt="Caixa do baralho Pequenas Marés ao lado de quatro cartas: Calma, Alegria, Coragem e Raiva">
   </div>
 
-  <section class="intro" id="intro">
-    <div class="intro-in reveal">
-      <h2>Pequenas Marés</h2>
-      <p class="lead">Pequenas Marés é um baralho sobre <b>emoções e valores para crianças</b>, feito para a MareAr Consultoria. A cliente escreveu as cartas e definiu a proposta pedagógica. Eu fiz a <b>direção de arte</b>: os personagens de cada carta, a diagramação e o estudo de materiais.</p>
+  <section class="pm-intro reveal">
+    <p class="lead">A MareAr Consultoria chegou com o conteúdo pronto: as emoções e os valores do baralho, as perguntas, as atividades e as orientações para os adultos. Meu trabalho foi dar forma a isso, criando um objeto que a criança tivesse vontade de pegar e que o adulto conseguisse usar sem manual.</p>
+    <ul class="pm-did">
+      <li><b>Personagens</b><span>18, gerados com IA no Midjourney</span></li>
+      <li><b>Diagramação</b><span>frente, verso e caixa</span></li>
+      <li><b>Materiais</b><span>estudo de papel e embalagem</span></li>
+    </ul>
+  </section>
+
+  <section class="pm-sec reveal" id="cartas">
+    <div class="pm-sec-head">
+      <h2>18 cartas, frente e verso</h2>
+      <p>Toque em uma carta para virar.</p>
+    </div>
+    <ul class="pm-grid">
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Alegria: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-alegria-f.webp" width="420" height="600" alt="Frente da carta Alegria" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-alegria-v.webp" width="420" height="600" alt="Verso da carta Alegria" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Tristeza: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-tristeza-f.webp" width="420" height="600" alt="Frente da carta Tristeza" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-tristeza-v.webp" width="420" height="600" alt="Verso da carta Tristeza" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Raiva: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-raiva-f.webp" width="420" height="600" alt="Frente da carta Raiva" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-raiva-v.webp" width="420" height="600" alt="Verso da carta Raiva" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Medo: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-medo-f.webp" width="420" height="600" alt="Frente da carta Medo" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-medo-v.webp" width="420" height="600" alt="Verso da carta Medo" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Calma: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-calma-f.webp" width="420" height="600" alt="Frente da carta Calma" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-calma-v.webp" width="420" height="600" alt="Verso da carta Calma" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Ciúmes: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-ciumes-f.webp" width="420" height="600" alt="Frente da carta Ciúmes" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-ciumes-v.webp" width="420" height="600" alt="Verso da carta Ciúmes" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Orgulho: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-orgulho-f.webp" width="420" height="600" alt="Frente da carta Orgulho" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-orgulho-v.webp" width="420" height="600" alt="Verso da carta Orgulho" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Vergonha: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-vergonha-f.webp" width="420" height="600" alt="Frente da carta Vergonha" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-vergonha-v.webp" width="420" height="600" alt="Verso da carta Vergonha" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Coragem: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-coragem-f.webp" width="420" height="600" alt="Frente da carta Coragem" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-coragem-v.webp" width="420" height="600" alt="Verso da carta Coragem" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Segurança: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-seguranca-f.webp" width="420" height="600" alt="Frente da carta Segurança" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-seguranca-v.webp" width="420" height="600" alt="Verso da carta Segurança" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Descanso: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-descanso-f.webp" width="420" height="600" alt="Frente da carta Descanso" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-descanso-v.webp" width="420" height="600" alt="Verso da carta Descanso" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Cuidado: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-cuidado-f.webp" width="420" height="600" alt="Frente da carta Cuidado" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-cuidado-v.webp" width="420" height="600" alt="Verso da carta Cuidado" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Escuta: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-escuta-f.webp" width="420" height="600" alt="Frente da carta Escuta" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-escuta-v.webp" width="420" height="600" alt="Verso da carta Escuta" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Pertencimento: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-pertencimento-f.webp" width="420" height="600" alt="Frente da carta Pertencimento" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-pertencimento-v.webp" width="420" height="600" alt="Verso da carta Pertencimento" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Diversão: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-diversao-f.webp" width="420" height="600" alt="Frente da carta Diversão" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-diversao-v.webp" width="420" height="600" alt="Verso da carta Diversão" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Autonomia: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-autonomia-f.webp" width="420" height="600" alt="Frente da carta Autonomia" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-autonomia-v.webp" width="420" height="600" alt="Verso da carta Autonomia" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Contribuição: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-contribuicao-f.webp" width="420" height="600" alt="Frente da carta Contribuição" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-contribuicao-v.webp" width="420" height="600" alt="Verso da carta Contribuição" loading="lazy"></span></button></li>
+      <li><button class="flip" type="button" aria-pressed="false" aria-label="Carta Liberdade: virar para ver o verso"><span class="flip-in"><img class="flip-f" src="/pequenas-mares/m/c-liberdade-f.webp" width="420" height="600" alt="Frente da carta Liberdade" loading="lazy"><img class="flip-v" src="/pequenas-mares/m/c-liberdade-v.webp" width="420" height="600" alt="Verso da carta Liberdade" loading="lazy"></span></button></li>
+    </ul>
+  </section>
+
+  <section class="pm-sec pm-anat reveal" id="anatomia">
+    <div class="pm-anat-media">
+      <img src="/pequenas-mares/m/c-alegria-v.webp" width="420" height="600" alt="Verso da carta Alegria" loading="lazy">
+      <span class="pin" style="top:30%">1</span><span class="pin" style="top:51%">2</span><span class="pin" style="top:78%">3</span>
+    </div>
+    <div class="pm-anat-text">
+      <h2>A frente é da criança. O verso, do adulto.</h2>
+      <p>Na frente ficam só o nome e o personagem, para a criança reconhecer a emoção sem precisar ler. O verso leva a cor da carta e organiza a conversa em três partes:</p>
+      <ol class="pm-steps">
+        <li><span><b>Pergunta</b> para a criança, sobre o dia dela.</span></li>
+        <li><span><b>Atividade</b> curta, em letra manuscrita, para fazer junto.</span></li>
+        <li><span><b>Dica</b> para o adulto, no rodapé.</span></li>
+      </ol>
     </div>
   </section>
 
-  <div class="row reveal meta-row">
-    <div class="body meta">
-      <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Direção de arte</b>, com criação dos personagens usando IA, diagramação das cartas e da caixa e estudo de materiais.</p></div></div>
-      <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Cliente</h4><p>MareAr Consultoria, responsável pelo conteúdo das cartas e pela proposta pedagógica.</p></div></div>
-      <div class="meta-item"><svg class="ico"><use href="#i-cal"/></svg><div><h4>Formato</h4><p>Projeto freelance.</p></div></div>
-      <div class="meta-item"><svg class="ico"><use href="#i-target"/></svg><div><h4>Entrega</h4>
-        <div class="stats">
-          <div class="stat"><svg class="ico"><use href="#i-doc"/></svg><b>18</b><span class="k">Cartas</span><span class="d">Uma para cada emoção ou valor, com frente e verso.</span></div>
-          <div class="stat"><svg class="ico"><use href="#i-people"/></svg><b>18</b><span class="k">Personagens</span><span class="d">Gerados com IA, um por carta, no mesmo traço.</span></div>
-          <div class="stat"><svg class="ico"><use href="#i-layers"/></svg><b>3</b><span class="k">Camadas no verso</span><span class="d">Pergunta para a criança, atividade e dica para o adulto.</span></div>
-          <div class="stat"><svg class="ico"><use href="#i-book"/></svg><b>1</b><span class="k">Caixa</span><span class="d">Faca e arte da embalagem do baralho.</span></div>
-        </div>
-      </div></div>
-    </div>
-  </div>
-
-  <div class="row reveal" id="ponto-de-partida">
-    <h3>Ponto de partida</h3>
-    <div class="body">
-      <p>O conteúdo chegou pronto: as emoções e os valores do baralho, as perguntas, as atividades e as orientações para os adultos. O trabalho era dar forma a esse conteúdo, criando um objeto que a criança tivesse vontade de pegar e que o adulto conseguisse usar sem manual.</p>
-    </div>
-  </div>
-
-  <div class="row reveal" id="anatomia">
-    <h3>Anatomia da carta</h3>
-    <div class="body">
-      <p>A <b>frente</b> é da criança: o nome da emoção e um personagem que a representa, sem texto além disso. O <b>verso</b> leva a cor da carta e organiza o uso em três partes: uma pergunta para a criança, uma atividade curta em letra manuscrita e, no rodapé, uma dica para o adulto.</p>
-    </div>
-  </div>
-
-  <div class="row reveal" id="baralho">
-    <h3>O baralho</h3>
-    <div class="body"><p>As 18 cartas, frente e verso.</p></div>
-  </div>
-  <div class="section-wide reveal">
-    <div class="carousel cards fig-wide" aria-roledescription="carrossel" aria-label="Cartas do baralho">
-      <div class="car-track">
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-alegria.webp" alt="Carta Alegria, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Alegria.</b> O que fez seu coração sorrir hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-tristeza.webp" alt="Carta Tristeza, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Tristeza.</b> Quando você se sentiu com vontade de chorar hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-raiva.webp" alt="Carta Raiva, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Raiva.</b> O que te deixou com muita raiva hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-medo.webp" alt="Carta Medo, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Medo.</b> O que deixou você com friozinho na barriga?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-calma.webp" alt="Carta Calma, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Calma.</b> Quando você sentiu seu corpo bem tranquilo hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-ciumes.webp" alt="Carta Ciúmes, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Ciúmes.</b> De quem ou de quê você sentiu ciúmes?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-orgulho.webp" alt="Carta Orgulho, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Orgulho.</b> Do que você se orgulhou hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-vergonha.webp" alt="Carta Vergonha, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Vergonha.</b> Quando você quis se esconder hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-coragem.webp" alt="Carta Coragem, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Coragem.</b> Teve alguma coisa que você fez mesmo com medo?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-seguranca.webp" alt="Carta Segurança, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Segurança.</b> O que te faz sentir seguro?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-descanso.webp" alt="Carta Descanso, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Descanso.</b> Seu corpo pediu uma pausa hoje?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-cuidado.webp" alt="Carta Cuidado, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Cuidado.</b> O que te faz sentir cuidado?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-escuta.webp" alt="Carta Escuta, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Escuta.</b> Quando você sente que as pessoas te ouvem de verdade?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-pertencimento.webp" alt="Carta Pertencimento, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Pertencimento.</b> O que faz você se sentir parte da família?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-diversao.webp" alt="Carta Diversão, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Diversão.</b> O que te faz dar risada até a barriga doer?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-autonomia.webp" alt="Carta Autonomia, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Autonomia.</b> O que você gosta de fazer sozinho?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-contribuicao.webp" alt="Carta Contribuição, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Contribuição.</b> O que você fez hoje que ajudou alguém?</figcaption></figure>
-        <figure class="car-slide"><div class="frame still"><img width="1600" height="1000" src="/pequenas-mares/m/carta-liberdade.webp" alt="Carta Liberdade, frente com o personagem e verso com pergunta, atividade e dica" loading="lazy"></div><figcaption><b>Liberdade.</b> Quando você pôde fazer do seu jeitinho hoje?</figcaption></figure>
-      </div>
-      <div class="car-ui">
-        <button class="car-btn" type="button" data-prev aria-label="Carta anterior"><svg class="ico"><use href="#i-prev"/></svg></button>
-        <button class="car-btn" type="button" data-next aria-label="Próxima carta"><svg class="ico"><use href="#i-next"/></svg></button>
-        <span class="car-count" aria-live="polite">1 / 18</span>
-        <div class="car-dots"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row reveal" id="personagens">
-    <h3>Personagens com IA</h3>
-    <div class="body">
-      <p>Gerei os personagens no Midjourney, um para cada carta. Cada emoção virou um bicho com a expressão dela: o coala para o medo, a coruja para a raiva, o leão para a coragem, a preguiça para a calma.</p>
+  <section class="pm-sec pm-split reveal" id="personagens">
+    <div class="pm-split-text">
+      <h2>Um bicho para cada emoção</h2>
+      <p>Gerei os personagens no Midjourney, um para cada carta: o coala para o medo, a coruja para a raiva, o leão para a coragem, a preguiça para a calma.</p>
       <p>Todos seguem o mesmo traço, em aquarela suave sobre fundo claro, para que as 18 cartas pareçam uma família só.</p>
     </div>
-  </div>
-  <div class="section-wide reveal">
-    <figure class="fig fig-wide"><div class="frame still"><img width="2400" height="1500" src="/pequenas-mares/m/pm-leque.webp" alt="Sete cartas em leque: Tristeza, Calma, Coragem, Alegria, Orgulho, Escuta e Raiva" loading="lazy"></div></figure>
-    <figure class="fig fig-wide"><div class="frame still"><img width="2400" height="1500" src="/pequenas-mares/m/pm-versos.webp" alt="Versos coloridos das cartas em leque" loading="lazy"></div><figcaption>No verso, cada carta tem a sua cor.</figcaption></figure>
-  </div>
+    <figure class="pm-fig"><img src="/pequenas-mares/m/pm-leque.webp" width="2400" height="1500" alt="Sete cartas em leque: Tristeza, Calma, Coragem, Alegria, Orgulho, Escuta e Raiva" loading="lazy"></figure>
+  </section>
 
-  <div class="row reveal" id="caixa">
-    <h3>Caixa e materiais</h3>
-    <div class="body">
-      <p>A caixa repete as ondas do nome do baralho na frente e na lombada, com a marca da MareAr no verso. Também fiz o estudo de materiais das cartas e da embalagem.</p>
+  <section class="pm-sec pm-split rev reveal" id="caixa">
+    <div class="pm-split-text">
+      <h2>Caixa e materiais</h2>
+      <p>A caixa leva as ondas do nome na frente e na lombada, com a marca da MareAr no verso. Também fiz o estudo de materiais das cartas e da embalagem.</p>
       <p class="todo">A completar: papel, gramatura, acabamento e formato final.</p>
     </div>
-  </div>
-  <div class="section-wide reveal">
-    <figure class="fig fig-wide"><div class="frame still"><img width="1744" height="1456" src="/pequenas-mares/m/caixa-faca.webp" alt="Faca da caixa aberta, com frente, lombada, verso e abas" loading="lazy"></div><figcaption>Faca da caixa.</figcaption></figure>
-    <figure class="fig fig-wide"><div class="frame still"><img width="2400" height="1500" src="/pequenas-mares/m/pm-pacote.webp" alt="Monte de cartas com Alegria por cima e o verso da carta ao lado" loading="lazy"></div></figure>
-  </div>
+    <figure class="pm-fig"><img src="/pequenas-mares/m/pm-pacote.webp" width="1680" height="1260" alt="Monte de cartas com Alegria por cima e o verso da carta ao lado" loading="lazy"></figure>
+  </section>
+
+  <figure class="pm-final reveal">
+    <img src="/pequenas-mares/m/pm-mesa.webp" width="2048" height="1374" alt="Cartas e caixa do baralho sobre uma mesa de madeira, com as mãos de uma criança ao lado" loading="lazy">
+    <figcaption>Mockup: cartas reais sobre uma cena gerada com IA.</figcaption>
+  </figure>
 
   <div class="to-top-wrap">
     <a class="pill-btn" href="#topo" data-top>Voltar ao topo <svg class="ico" style="transform:rotate(-90deg)"><use href="#i-next"/></svg></a>
@@ -167,5 +143,8 @@
   </footer>
 </main>
 <script src="/assets/site.js" defer></script>
+<script>
+document.querySelectorAll('.flip').forEach(function(b){b.addEventListener('click',function(){var on=b.classList.toggle('on');b.setAttribute('aria-pressed',on);});});
+</script>
 </body>
 </html>
