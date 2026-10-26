@@ -10,10 +10,10 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
-<body>
+<body id="topo">
 <!-- icons:start -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5c1.3-2.2 3.3-3.3 5.5-3.3s4.2 1.1 5.5 3.3"/></symbol>
@@ -31,6 +31,7 @@
   <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
   <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
   <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
 </svg>
 <!-- icons:end -->
 
@@ -64,8 +65,7 @@
     </div>
   </section>
 
-  <div class="row reveal">
-    <span></span>
+  <div class="row reveal meta-row">
     <div class="body meta">
       <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Product Designer</b>, responsável pelo desenho e pela pesquisa da jornada completa.</p></div></div>
       <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Time</h4><p>Uma PM, uma product designer, um gerente de engenharia e um time de devs back-end e front-end.</p></div></div>
@@ -126,42 +126,20 @@
     </div>
   </div>
   <div class="section-wide reveal">
-    <div class="flow fig-wide">
-      <div class="lane">
-        <div class="lane-head"><h4>Antes</h4><div class="sum"><span class="chip-s">4 telas</span><span class="chip-s">Configuração separada</span><span class="chip-s">Conferência fora do sistema</span></div></div>
-        <div class="lane-scroll">
-          <div class="steps" role="list">
-            <div class="step" role="listitem"><span class="n">1</span><b>Listagem</b><span class="t">Sem status das etapas nem sinal de risco</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">2</span><b>Criar avaliação</b><span class="t">Formulário longo com dados, estrutura e disciplinas</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">3</span><b>Composição</b><span class="t">Cards com pouca informação do item</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step loop" role="listitem"><span class="n">4</span><b>Banco de questões</b><span class="t">Outra tela cheia, a cada inserção de itens</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">5</span><b>Jornada</b><span class="t">Editada em gavetas, uma seção por vez</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step out" role="listitem"><span class="n">6</span><b>Exportar arquivos</b><span class="t">Revisão, diagramação e conferência fora do sistema</span></div>
-          </div>
-        </div>
-        <div class="branch"><span>Para mudar a configuração depois:</span><span class="step out"><b>Listagem → Configurar</b></span><span>em outra tela</span></div>
+    <div class="flow2 fig-wide">
+      <div class="lane2">
+        <p class="lane2-head"><b>Antes</b><span>4 telas, e a conferência terminava fora do sistema</span></p>
+        <ol class="chain">
+          <li>Listagem</li><li>Criação</li><li>Composição</li><li>Banco de questões</li><li>Jornada</li><li class="out">Exportação</li>
+        </ol>
       </div>
-      <div class="lane">
-        <div class="lane-head"><h4>Depois</h4><div class="sum"><span class="chip-s dark">1 tela por prova</span><span class="chip-s">Salvamento automático</span><span class="chip-s">Conferência dentro da ferramenta</span></div></div>
-        <div class="lane-scroll">
-          <div class="steps" role="list">
-            <div class="step" role="listitem"><span class="n">1</span><b>Listagem</b><span class="t">Status por aba e provas em atenção destacadas</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">2</span><b>Nova avaliação</b><span class="t">Só o mínimo para começar</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step big" role="listitem"><span class="n">3</span><b>Avaliação</b><span class="t">Uma tela com três abas e o resumo sempre visível</span><span class="tabs"><i>Configuração</i><i>Jornada</i><i>Composição</i><i>Resumo</i></span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">4</span><b>Concluir composição</b><span class="t">Uma ação deliberada de quem revisou</span></div>
-            <div class="arrow" aria-hidden="true"></div>
-            <div class="step" role="listitem"><span class="n">5</span><b>Definir liberação</b><span class="t">Travas só onde o erro é caro</span></div>
-          </div>
-        </div>
+      <div class="lane2">
+        <p class="lane2-head"><b>Depois</b><span>1 tela por prova, com tudo à vista</span></p>
+        <ol class="chain">
+          <li>Listagem</li><li>Nova avaliação</li><li class="main">Avaliação<small>Configuração · Jornada · Composição · Resumo</small></li><li>Liberação</li>
+        </ol>
       </div>
+      <p class="flow-note">Tracejado: etapa feita fora do sistema.</p>
     </div>
   </div>
 
@@ -182,7 +160,7 @@
     </div>
   </div>
   <div class="section-wide reveal">
-    <figure class="fig fig-wide"><button class="frame" type="button" data-zoom><img width="3200" height="777" src="/assets/media/ciclo-fluxo.webp" alt="Mapa do ciclo de vida da avaliação com estados, transições e regras" loading="lazy"></button><figcaption>Estados, transições e regras de bloqueio da composição. Clique para ampliar.</figcaption></figure>
+    <figure class="fig fig-wide"><div class="frame still"><img width="3200" height="777" src="/assets/media/ciclo-fluxo.webp" alt="Mapa do ciclo de vida da avaliação com estados, transições e regras" loading="lazy"></div><figcaption>Estados, transições e regras de bloqueio da composição.</figcaption></figure>
   </div>
 
   <div class="row reveal" id="mudancas">
@@ -297,10 +275,9 @@
     </div>
   </div>
 
-  <nav class="next" aria-label="Outros cases">
-    <a href="/"><span class="px">← Voltar</span><b>Início</b></a>
-    <a href="/sabioteca/" style="text-align:right"><span class="px">Próximo →</span><b>sabioteca</b></a>
-  </nav>
+  <div class="to-top-wrap">
+    <a class="pill-btn" href="#topo" data-top>Voltar ao topo <svg class="ico" style="transform:rotate(-90deg)"><use href="#i-next"/></svg></a>
+  </div>
 
   <footer class="foot wrap" style="border-top:0">
     <div class="lines">

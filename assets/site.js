@@ -199,3 +199,11 @@
     sync();
   });
 })();
+
+/* ---- voltar ao topo ---- */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('[data-top]'); if (!a) return;
+  e.preventDefault();
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+});

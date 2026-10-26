@@ -11,7 +11,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -32,6 +32,7 @@
   <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
   <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
   <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
 </svg>
 <!-- icons:end -->
 
@@ -69,17 +70,17 @@
       </a>
     </article>
 
-    <article class="project reveal">
+    <article class="project reveal locked" aria-label="sabioteca, case em construção">
       <div class="project-info">
         <h2>sabioteca</h2>
         <p class="desc">Repositório de pesquisa construído sem desenvolvedor e conectado às ferramentas do time. Antes de alguém planejar uma pesquisa, ele mostra o que já se sabe sobre o tema.</p>
         <p class="who">Concepção e construção · Arco Educação</p>
         <div class="tags">
-          <span class="tag live">Em andamento</span><span class="tag">Research Ops</span><span class="tag">Ferramenta com IA</span><span class="tag">Definição de escopo</span><span class="tag">Privacidade de participantes</span>
+          <span class="tag">Research Ops</span><span class="tag">Ferramenta com IA</span><span class="tag">Definição de escopo</span><span class="tag">Privacidade de participantes</span>
         </div>
-        <a class="pill-btn" href="/sabioteca/">Ver case <svg class="ico"><use href="#i-go"/></svg></a>
+        <span class="pill-btn is-disabled" aria-disabled="true"><svg class="ico"><use href="#i-lock"/></svg> Case em construção</span>
       </div>
-      <a class="media-card ui" href="/sabioteca/" aria-label="Abrir o case da sabioteca">
+      <div class="media-card ui">
         <div class="shot">
           <div class="mock" aria-hidden="true">
             <div class="mock-top"><span class="field">Como professores revisam provas antes de imprimir</span><span class="go">Já sabemos isso?</span></div>
@@ -90,8 +91,9 @@
             <div class="mock-line"><span class="k">Com quem falar</span><span>Designer e PM do squad de montagem.</span></div>
           </div>
         </div>
+        <span class="lock-badge"><svg class="ico"><use href="#i-lock"/></svg> Em construção</span>
         <span class="year">2026</span>
-      </a>
+      </div>
     </article>
   </section>
 
