@@ -447,3 +447,4 @@ tr.flag td { background: repeating-linear-gradient(45deg, #F0F0F0 0 3px, transpa
   .about-photo { max-width: 260px; }
 }
 @media (max-width: 620px) { .about-facts { grid-template-columns: minmax(0, 1fr); } }
+.meta-row .meta-item:nth-child(4) h4 { border-bottom: 0; padding-bottom: 0; margin-bottom: 4px; }
