@@ -368,6 +368,6 @@ tr.flag td { background: repeating-linear-gradient(45deg, #F0F0F0 0 3px, transpa
 .row .body .kind { display: flex; }
 
 /* mockup em imagem no card da home */
-.media-card .mock-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.media-card .mock-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
 .media-card:hover .mock-img { transform: scale(1.02); }
 .case-hero-media img { width: 100%; height: auto; display: block; }
