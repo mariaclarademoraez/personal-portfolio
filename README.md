@@ -41,3 +41,14 @@ Depois abra http://localhost:8000.
 ## Visual
 
 Fundo cinza claro, texto em preto e cinzas, sem cor de destaque. Inter no texto e Pixelify Sans só em rótulos pequenos. Os blocos aparecem com animação suave ao rolar, e tudo respeita `prefers-reduced-motion`.
+
+## Vídeo do case da Gestora
+
+O vídeo de abertura (`assets/media/ga-tour.mp4`) é gerado com Remotion a partir das telas em `video/public/` (já editadas: nomes fictícios, sem tooltips, sem foto de perfil).
+
+```bash
+cd video && npm install
+npx remotion render src/index.ts GaFlyover out/ga.mp4
+```
+
+Os pontos por onde a câmera e o cursor passam ficam na lista `SCENES` em `video/src/GaFlyover.tsx`.
