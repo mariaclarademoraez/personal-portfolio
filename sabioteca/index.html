@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
-<body>
+<body id="topo">
 <!-- icons:start -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5c1.3-2.2 3.3-3.3 5.5-3.3s4.2 1.1 5.5 3.3"/></symbol>
@@ -44,13 +44,124 @@
 </header>
 
 <main>
-  <section class="case-head" style="min-height:70vh;align-content:center">
-    <span class="badge"><svg class="ico"><use href="#i-lock"/></svg></span>
-    <p class="eyebrow">sabioteca</p>
-    <h1>Este case está em construção</h1>
-    <p style="max-width:46ch;color:var(--muted)">Estou revisando o conteúdo. Enquanto isso, veja o case da Nova Gestora de Avaliações.</p>
-    <a class="pill-btn dark" href="/gestora-de-avaliacoes/">Ver o case da Gestora <svg class="ico"><use href="#i-go"/></svg></a>
+  <p class="draft-note"><svg class="ico"><use href="#i-lock"/></svg> Rascunho · case em construção</p>
+  <section class="case-head">
+    <span class="badge rise"><svg class="ico"><use href="#i-book"/></svg></span>
+    <p class="eyebrow rise">sabioteca</p>
+    <h1 class="rise d1">E se, antes de começar uma pesquisa, o time soubesse o que já foi descoberto?</h1>
+    <div class="tags rise d2">
+      <span class="tag live">Em andamento</span><span class="tag">Research Ops</span><span class="tag">Ferramenta com IA</span><span class="tag">Definição de escopo</span><span class="tag">Privacidade de participantes</span>
+    </div>
+    <a class="scroll-cue" href="#intro" aria-label="Ler o case"><svg class="ico" style="width:22px;height:22px"><use href="#i-down"/></svg></a>
   </section>
+
+  <div class="narrow rise d3" style="max-width:1180px">
+    <div class="raio case-hero-media" style="box-shadow:0 40px 80px -40px rgba(0,0,0,.3), 0 0 0 1px rgba(0,0,0,.05)">
+      <div class="mock-top">
+        <label class="px" for="raioQ" style="font-size:12px;color:var(--muted)">Tema</label>
+        <input id="raioQ" class="field" type="text" value="Como professores revisam provas antes de imprimir" readonly style="font:inherit;font-size:14px">
+        <button class="raio-run" id="raioRun" type="button">Já sabemos isso?</button>
+      </div>
+      <div class="raio-out" id="raioOut" aria-live="polite"></div>
+      <p class="raio-foot">Exemplo com dados fictícios. Na ferramenta, cada linha leva ao documento de origem.</p>
+    </div>
+  </div>
+
+  <section class="intro" id="intro">
+    <div class="intro-in reveal">
+      <h2>sabioteca</h2>
+      <p class="lead">As pesquisas do time estavam espalhadas entre pastas, canais e cards. A sabioteca <b>reúne esse material e responde se um tema já foi pesquisado</b> antes de alguém começar do zero. O projeto está em andamento, e este case será atualizado.</p>
+    </div>
+  </section>
+
+  <div class="row reveal">
+    <span></span>
+    <div class="body meta">
+      <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Concepção, design e construção</b>, com o Claude e sem desenvolvedor.</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Time</h4><p>Escopo definido com mais duas pessoas de design e produto.</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-cal"/></svg><div><h4>Período</h4><p>Outubro de 2026 · em andamento</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-target"/></svg><div><h4>Até agora</h4>
+        <div class="stats">
+          <div class="stat"><svg class="ico"><use href="#i-link"/></svg><b>5</b><span class="k">Ferramentas conectadas</span><span class="d">Drive, agenda, chat, tarefas e dados de uso.</span></div>
+          <div class="stat"><svg class="ico"><use href="#i-cal"/></svg><b>11 dias</b><span class="k">Até a primeira versão</span><span class="d">Do primeiro pedido à versão com controle de versão.</span></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Problema</h3>
+    <div class="body">
+      <p>Sínteses ficavam em uma pasta, transcrições em outra, decisões em canais de chat e o status das iniciativas em outra ferramenta. Como times e produtos mudam de nome com frequência, documentos antigos ficavam quase impossíveis de localizar.</p>
+      <p>Os planos de pesquisa também não seguiam um padrão, apesar de existir um template oficial. E boa parte de quem precisa dessas informações não é de pesquisa: são pessoas de engenharia, produto e conteúdo.</p>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Formato</h3>
+    <div class="body">
+      <p>O objetivo inicial era um chat fixo, acessível ao time por um link. O formato certo apareceu na terceira tentativa.</p>
+      <div class="cards3">
+        <div class="mini"><span class="k">Descartado</span><h4>Projeto compartilhado</h4><p>No plano da empresa, conectores só funcionam em projetos privados.</p></div>
+        <div class="mini"><span class="k">Descartado</span><h4>Assistente no Slack</h4><p>Exigia conta dedicada, créditos e configuração por canal, sem interface própria.</p></div>
+        <div class="mini pick"><span class="k">Escolhido</span><h4>Artefato publicado</h4><p>Usa os acessos de quem abre, então cada pessoa vê só o que já podia ver.</p></div>
+      </div>
+      <div class="note"><span class="k">Aprendizado</span><p>A primeira recomendação que recebi da IA sobre os conectores estava incorreta, e isso só ficou claro na configuração. Desde então, confirmo as limitações técnicas antes de desenhar o fluxo.</p></div>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Escopo</h3>
+    <div class="body">
+      <p>Ferramentas de IA tendem a acumular funções. Para evitar isso, fizemos uma matriz em grupo definindo o que a sabioteca é e o que ela não é.</p>
+      <div class="matrix">
+        <div class="mini"><span class="k">É e faz</span><ul>
+          <li>Repositório das pesquisas do time</li><li>Facilita encontrar o que já foi pesquisado</li><li>Evita retrabalho e sobreposição</li><li>Cruza dados sempre citando a fonte</li><li>Gera planos a partir do template oficial</li>
+        </ul></div>
+        <div class="mini no"><span class="k">Não é e não faz</span><ul>
+          <li>Fonte da verdade ou consolidador de insights</li><li>Persona sintética</li><li>Guia de como fazer pesquisa</li><li>Não toma decisões de discovery</li><li>Não sugere temas de pesquisa</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Como funciona</h3>
+    <div class="body">
+      <p>Repetir uma pesquisa que já foi feita é um dos custos mais altos em research ops. Por isso, o primeiro passo para criar um plano é um raio-x do tema, como o do topo desta página, com a fonte de cada informação.</p>
+      <p>Cada pesquisa também tem um resumo gerado uma única vez e salvo para todos, que só é atualizado quando algum documento muda. As transcrições das entrevistas são importadas para a pasta da pesquisa, e os planos novos são salvos no drive como cópia do template. O controle de versão registra cada mudança e permite restaurar versões anteriores.</p>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Cuidados</h3>
+    <div class="body">
+      <p><b>Participantes nunca são citados pelo nome.</b> Quem aceitou participar de uma pesquisa não aceitou ser mencionado em qualquer conversa, então as respostas usam apenas cargo e área.</p>
+      <p><b>Só a transcrição, sem resumo automático.</b> O resumo da ferramenta de reunião pode enviesar a leitura.</p>
+      <p><b>Custo como decisão de design.</b> Cada uso consome o plano de quem está usando, então o modelo mais robusto fica reservado ao raio-x e à geração de planos.</p>
+    </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Próximos passos</h3>
+    <div class="body">
+      <p>A matriz foi definida depois de boa parte da construção, e algumas funções foram além do combinado. O raio-x mostra lacunas, que podem ser lidas como sugestão de tema, e o chat às vezes apresenta interpretações. Estou alinhando esses pontos com o time.</p>
+      <p>Para avaliar o impacto, vou acompanhar o número de pessoas que usam a ferramenta, a quantidade de planos gerados e o tempo de criação de um plano antes e depois.</p>
+    </div>
+  </div>
+
+  <div class="to-top-wrap">
+    <a class="pill-btn" href="#topo" data-top>Voltar ao topo <svg class="ico" style="transform:rotate(-90deg)"><use href="#i-next"/></svg></a>
+  </div>
+
+  <footer class="foot wrap" style="border-top:0">
+    <div class="lines">
+      <span class="email" id="email">mariaclarademoraez@gmail.com</span>
+      <button class="copy-btn" id="copyEmail" type="button">Copiar e-mail</button>
+      <span>© 2026 Maria Clara Moraes</span>
+    </div>
+  </footer>
 </main>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

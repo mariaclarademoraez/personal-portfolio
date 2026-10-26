@@ -39,5 +39,5 @@ Depois abra http://localhost:8000.
 
 ## Visual
 
-Fundo cinza claro, texto em preto e cinzas, sem cor de destaque. Inter no texto e Pixelify Sans só em rótulos pequenos. Os blocos aparecem com animação suave ao rolar, e tudo respeita `prefers-reduced-motion`.
+Fundo cinza claro, texto em preto e cinzas, sem cor de destaque. Inter no texto e IBM Plex Mono só em rótulos pequenos. Os blocos aparecem com animação suave ao rolar, e tudo respeita `prefers-reduced-motion`.
 
