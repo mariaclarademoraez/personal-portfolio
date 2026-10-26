@@ -275,3 +275,92 @@ tr.flag td { background: repeating-linear-gradient(45deg, #F0F0F0 0 3px, transpa
   .media-card.ui { padding: 6% 5% 44px; }
   .mock-top .go { display: none; }
 }
+
+/* ===================== v2: menos pixel, novos componentes ===================== */
+/* fonte pixelada só em rótulos de identidade: cargo na home, nome do projeto no topo do case e ano */
+.quote span, .note .k, .mock-line .k, .mock-line .src, .mock-top .go, .raio-run, .raio-out .px, .raio-out .src,
+.mini .k, th, .chip, .next .px, .raio .px, .frame::after, .demo-top .px, .resumo .px {
+  font-family: var(--f-sans); letter-spacing: 0;
+}
+.next .px, .quote span, .note .k, .mini .k { font-size: 13px; color: var(--muted); font-weight: 500; }
+.note .k { color: var(--ink); }
+
+.section-wide { max-width: 1180px; margin: 0 auto; }
+
+/* carrossel */
+.carousel { position: relative; display: grid; gap: 14px; }
+.car-track { display: grid; grid-auto-flow: column; grid-auto-columns: min(100%, 880px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 4px; scrollbar-width: none; overscroll-behavior-x: contain; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-slide { scroll-snap-align: start; margin: 0; display: grid; gap: 10px; align-content: start; }
+.car-slide .frame { aspect-ratio: 1440 / 723; }
+.car-slide .frame img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.car-ui { display: flex; align-items: center; gap: 10px; }
+.car-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); display: inline-grid; place-items: center; cursor: pointer; transition: background .2s, opacity .2s; }
+.car-btn:hover { background: var(--pill); }
+.car-btn:disabled { opacity: .35; cursor: default; }
+.car-btn .ico { width: 18px; height: 18px; }
+.car-count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 4ch; }
+.car-dots { display: flex; gap: 6px; margin-left: auto; }
+.car-dots button { width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0; background: #CFCFCF; cursor: pointer; transition: background .2s, transform .2s; }
+.car-dots button[aria-current="true"] { background: var(--ink); transform: scale(1.25); }
+
+/* comparação com linha arrastável */
+.slider { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 0 0 1px var(--line); background: var(--surface); aspect-ratio: 2 / 1; touch-action: pan-y; user-select: none; -webkit-user-select: none; --pos: 50%; }
+.slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; pointer-events: none; }
+.slider .after { clip-path: inset(0 0 0 var(--pos)); }
+.slider .handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--ink); pointer-events: none; }
+.slider .handle::after { content: ""; position: absolute; top: 50%; left: 50%; width: 34px; height: 34px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 7l-5 5 5 5M15 7l5 5-5 5'/%3E%3C/svg%3E"); background-size: 20px; background-position: center; background-repeat: no-repeat; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+.slider .lbl { position: absolute; top: 10px; font-size: 12px; font-weight: 500; background: rgba(22,22,22,.85); color: #fff; padding: 3px 9px; border-radius: 999px; pointer-events: none; }
+.slider .lbl.a { left: 10px; } .slider .lbl.b { right: 10px; }
+.slider input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; margin: 0; cursor: ew-resize; }
+.slider:focus-within { box-shadow: 0 0 0 2px var(--ink); }
+.slider-hint { font-size: 13px; color: var(--muted); }
+
+/* fluxograma */
+.flow { display: grid; gap: 28px; }
+.lane { display: grid; gap: 12px; }
+.lane-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lane-head h4 { margin: 0; font-size: 16px; color: var(--ink); }
+.lane-head .sum { display: flex; gap: 6px; flex-wrap: wrap; }
+.lane-scroll { overflow-x: auto; padding: 12px 0 6px; }
+.steps { display: flex; align-items: stretch; gap: 0; min-width: max-content; }
+.step { width: 168px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; display: grid; gap: 4px; align-content: start; position: relative; }
+.step .n { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step b { font-size: 14px; line-height: 1.3; }
+.step span.t { font-size: 13px; color: var(--text); line-height: 1.4; }
+.step.out { border-style: dashed; background: transparent; }
+.step.loop::before { content: "↺ ida e volta"; position: absolute; top: -10px; right: 10px; font-size: 11px; background: var(--bg); padding: 0 6px; color: var(--muted); }
+.step.big { width: 300px; border-color: var(--ink); }
+.step .tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+.step .tabs i { font-style: normal; font-size: 12px; background: var(--pill); border-radius: 6px; padding: 2px 7px; }
+.arrow { width: 34px; flex: none; position: relative; }
+.arrow::before { content: ""; position: absolute; left: 6px; right: 8px; top: 50%; height: 1.5px; background: #B5B5B5; }
+.arrow::after { content: ""; position: absolute; right: 6px; top: 50%; width: 7px; height: 7px; border-top: 1.5px solid #B5B5B5; border-right: 1.5px solid #B5B5B5; transform: translateY(-50%) rotate(45deg); }
+.branch { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); padding-left: 4px; }
+.branch .step { width: auto; padding: 8px 12px; }
+.chip-s { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--text); background: var(--surface); }
+.chip-s.dark { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* ciclo de vida: faixa rolável */
+.strip { overflow-x: auto; border-radius: 12px; box-shadow: 0 0 0 1px var(--line); background: var(--surface); }
+.strip img { height: 420px; width: auto; max-width: none; }
+
+/* lista de features */
+.features { display: grid; gap: 0; }
+.feature { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 40px; padding-block: 36px; border-top: 1px solid var(--line); align-items: start; }
+.feature-text { display: grid; gap: 10px; position: sticky; top: 24px; }
+.feature-text h3 { font-size: 22px; }
+.feature-text p { font-size: 15px; }
+.feature-text .kind { display: flex; gap: 6px; }
+.feature-media { display: grid; gap: 10px; min-width: 0; }
+.feature-media .frame.crop { aspect-ratio: 2 / 1; }
+
+@media (max-width: 900px) {
+  .feature { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .feature-text { position: static; }
+}
+@media (max-width: 620px) {
+  .strip img { height: 300px; }
+  .car-dots { display: none; }
+}

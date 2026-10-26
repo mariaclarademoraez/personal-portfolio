@@ -29,6 +29,8 @@
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
   <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><path d="M3.5 18c.7-2.6 2.4-4 4.5-4s3.8 1.4 4.5 4M11.5 18c.7-2.6 2.4-4 4.5-4s3.8 1.4 4.5 4"/></symbol>
   <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
 </svg>
 <!-- icons:end -->
 
@@ -65,9 +67,9 @@
   <div class="row reveal">
     <span></span>
     <div class="body meta">
-      <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Product Designer.</b> Responsável pela Listagem e pela Duplicação, e pela Composição em dupla com outra designer.</p></div></div>
-      <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Time</h4><p>Uma PM, duas designers e o squad de engenharia de produção de avaliações.</p></div></div>
-      <div class="meta-item"><svg class="ico"><use href="#i-cal"/></svg><div><h4>Período</h4><p>Discovery em 2025 · Lançamento em agosto de 2026 · Estabilização em curso</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Product Designer</b>, responsável pelo desenho e pela pesquisa da jornada completa.</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Time</h4><p>Uma PM, uma product designer, um gerente de engenharia e um time de devs back-end e front-end.</p></div></div>
+      <div class="meta-item"><svg class="ico"><use href="#i-cal"/></svg><div><h4>Período</h4><p>Discovery inicial em 2025, anterior à minha entrada · Design e desenvolvimento em 2026 · Lançamento em agosto de 2026</p></div></div>
       <div class="meta-item"><svg class="ico"><use href="#i-target"/></svg><div><h4>Resultado</h4>
         <div class="stats">
           <div class="stat"><svg class="ico"><use href="#i-doc"/></svg><b>1.500</b><span class="k">Provas criadas em massa</span><span class="d">Avaliações do ano seguinte criadas por importação, cerca de 80% da demanda anual.</span></div>
@@ -91,117 +93,262 @@
   <div class="row reveal" id="como-era">
     <h3>Como era</h3>
     <div class="body">
-      <p>Para documentar o ponto de partida, criei uma avaliação de teste do zero na ferramenta antiga e registrei cada etapa. O fluxo passava por quatro telas diferentes, e alguns problemas só ficaram claros fazendo o caminho completo.</p>
+      <p>Para documentar o ponto de partida, criei uma avaliação de teste do zero na ferramenta antiga e registrei cada etapa. Passe pelas telas para ver o caminho completo.</p>
     </div>
   </div>
-  <div class="narrow" style="max-width:1180px">
-    <div class="duo fig-wide reveal">
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antes-banco-itens.webp" alt="Banco de questões da ferramenta antiga, com um único card de item ocupando a tela" loading="lazy"></button><figcaption><b>Busca de itens.</b> Mesmo com as tags ocultas, cabia cerca de um item por tela.</figcaption></figure>
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antes-erro-generico.webp" alt="Composição da ferramenta antiga com dois de cinco itens inseridos" loading="lazy"></button><figcaption><b>Erro sem contexto.</b> De 3 itens selecionados, só 2 entraram. O aviso sumia sozinho e não dizia qual item foi recusado.</figcaption></figure>
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antes-configurar.webp" alt="Tela separada Alterar avaliação na ferramenta antiga" loading="lazy"></button><figcaption><b>Configuração à parte.</b> Para mudar um dado básico, era preciso voltar à listagem e abrir outra tela.</figcaption></figure>
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antes-distribuicao.webp" alt="Gaveta de distribuição com a opção Avaliação Nacional ligada" loading="lazy"></button><figcaption><b>Risco por padrão.</b> "Avaliação Nacional" vinha ligada até em provas de teste.</figcaption></figure>
+  <div class="section-wide reveal">
+    <div class="carousel fig-wide" aria-roledescription="carrossel" aria-label="Telas da ferramenta antiga">
+      <div class="car-track" tabindex="0">
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-01.webp" alt="Listagem da ferramenta antiga" loading="lazy"></button><figcaption><b>Listagem.</b> Nome, nível, aplicação, itens e um status único. Sem ID, sem estado das etapas e sem sinal de risco.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-02.webp" alt="Formulário de criação vazio" loading="lazy"></button><figcaption><b>Criar avaliação.</b> Um formulário longo em tela cheia, com dados básicos, método de avaliação e modelos.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-06.webp" alt="Seção de conteúdo e estrutura do formulário" loading="lazy"></button><figcaption><b>Estrutura misturada.</b> No mesmo formulário, nível, séries, três chaves de comportamento e um único tipo de questão por caderno.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-12.webp" alt="Banco de questões com um card de item" loading="lazy"></button><figcaption><b>Banco de questões.</b> Outra tela cheia. Mesmo com as tags ocultas, cabia cerca de um item por tela.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-13.webp" alt="Itens selecionados no banco de questões" loading="lazy"></button><figcaption><b>Sem validação de série.</b> As tags só apareciam na escolha. Um item de 9º ano podia entrar numa prova de 3ª série sem aviso.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-14.webp" alt="Composição depois de um item recusado" loading="lazy"></button><figcaption><b>Erro sem contexto.</b> De 3 itens selecionados, 2 entraram. O aviso sumia sozinho e não dizia qual foi recusado.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-15.webp" alt="Composição com dois itens" loading="lazy"></button><figcaption><b>Composição.</b> O card do item mostrava disciplina, assunto e o começo do enunciado. ID, gabarito, dificuldade e tipo ficavam escondidos.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-17.webp" alt="Jornada em modo leitura" loading="lazy"></button><figcaption><b>Jornada.</b> Cards só de leitura. Cada seção era editada numa gaveta, uma por vez, sem visão do todo.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-19.webp" alt="Gaveta de distribuição com Avaliação Nacional ligada" loading="lazy"></button><figcaption><b>Risco por padrão.</b> "Avaliação Nacional" vinha ligada, inclusive em provas de teste.</figcaption></figure>
+        <figure class="car-slide"><button class="frame" type="button" data-zoom><img width="1440" height="723" src="/assets/media/antiga-23.webp" alt="Tela separada Alterar avaliação" loading="lazy"></button><figcaption><b>Configuração à parte.</b> Para mudar um dado básico, era preciso voltar à listagem e abrir outra tela.</figcaption></figure>
+      </div>
+      <div class="car-ui">
+        <button class="car-btn" type="button" data-prev aria-label="Tela anterior"><svg class="ico"><use href="#i-prev"/></svg></button>
+        <button class="car-btn" type="button" data-next aria-label="Próxima tela"><svg class="ico"><use href="#i-next"/></svg></button>
+        <span class="car-count" aria-live="polite">1 / 10</span>
+        <div class="car-dots"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row reveal" id="fluxo">
+    <h3>O fluxo, antes e depois</h3>
+    <div class="body">
+      <p>O caminho para criar e montar uma prova passava por quatro telas diferentes e terminava fora do sistema. Na nova Gestora, cada prova tem uma tela só, com tudo que o time precisa ver.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <div class="flow fig-wide">
+      <div class="lane">
+        <div class="lane-head"><h4>Antes</h4><div class="sum"><span class="chip-s">4 telas</span><span class="chip-s">Configuração separada</span><span class="chip-s">Conferência fora do sistema</span></div></div>
+        <div class="lane-scroll">
+          <div class="steps" role="list">
+            <div class="step" role="listitem"><span class="n">1</span><b>Listagem</b><span class="t">Sem status das etapas nem sinal de risco</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">2</span><b>Criar avaliação</b><span class="t">Formulário longo com dados, estrutura e disciplinas</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">3</span><b>Composição</b><span class="t">Cards com pouca informação do item</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step loop" role="listitem"><span class="n">4</span><b>Banco de questões</b><span class="t">Outra tela cheia, a cada inserção de itens</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">5</span><b>Jornada</b><span class="t">Editada em gavetas, uma seção por vez</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step out" role="listitem"><span class="n">6</span><b>Exportar arquivos</b><span class="t">Revisão, diagramação e conferência fora do sistema</span></div>
+          </div>
+        </div>
+        <div class="branch"><span>Para mudar a configuração depois:</span><span class="step out"><b>Listagem → Configurar</b></span><span>em outra tela</span></div>
+      </div>
+      <div class="lane">
+        <div class="lane-head"><h4>Depois</h4><div class="sum"><span class="chip-s dark">1 tela por prova</span><span class="chip-s">Salvamento automático</span><span class="chip-s">Conferência dentro da ferramenta</span></div></div>
+        <div class="lane-scroll">
+          <div class="steps" role="list">
+            <div class="step" role="listitem"><span class="n">1</span><b>Listagem</b><span class="t">Status por aba e provas em atenção destacadas</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">2</span><b>Nova avaliação</b><span class="t">Só o mínimo para começar</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step big" role="listitem"><span class="n">3</span><b>Avaliação</b><span class="t">Uma tela com três abas e o resumo sempre visível</span><span class="tabs"><i>Configuração</i><i>Jornada</i><i>Composição</i><i>Resumo</i></span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">4</span><b>Concluir composição</b><span class="t">Uma ação deliberada, não um efeito colateral</span></div>
+            <div class="arrow" aria-hidden="true"></div>
+            <div class="step" role="listitem"><span class="n">5</span><b>Definir liberação</b><span class="t">Travas só onde o erro é caro</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="row reveal" id="discovery">
     <h3>Discovery</h3>
     <div class="body">
-      <p>O discovery começou com workshops por etapa da produção, em que levantamos o tempo gasto por item e as principais ineficiências de cada fase. A divisão entre o banco de itens e a ferramenta de montagem de provas veio desse trabalho.</p>
-      <p>Em seguida, a engenharia fez um inventário do sistema antigo e encontrou 49 casos de uso e 3 formas diferentes de montar um caderno. Muitas regras que o time considerava comportamento padrão existiam apenas no código.</p>
-      <p>Ao longo do projeto, validei cada etapa com usuárias reais, começando pela pessoa que mais usava o sistema antes de levar para o time inteiro.</p>
+      <p>O discovery inicial foi feito em 2025, antes da minha entrada no projeto, com workshops por etapa da produção. Ali o time levantou o tempo gasto por item e as principais ineficiências de cada fase.</p>
+      <p>Meu trabalho foi transformar esses achados em produto: priorizar, desenhar a jornada completa e validar cada etapa com quem usa, começando pela pessoa que mais usava o sistema antes de levar para o time inteiro.</p>
+      <p>A engenharia também fez um inventário do sistema antigo e encontrou 49 casos de uso e 3 formas diferentes de montar um caderno. Muitas regras que o time considerava comportamento padrão existiam apenas no código.</p>
       <figure class="fig"><button class="frame" type="button" data-zoom><img width="2000" height="696" src="/assets/media/discovery-entrevistas.webp" alt="Quadro de síntese das entrevistas sobre estrutura de cadernos, organizado em colunas" loading="lazy"></button><figcaption>Síntese das entrevistas sobre estrutura de cadernos, agrupada por tema.</figcaption></figure>
-      <div class="quote"><p>"Ainda não temos teste de usabilidade, mas temos argumentos para justificar as decisões, porque a validação com usuário aconteceu durante todo o processo."</p><span>Registro meu na validação da Composição</span></div>
     </div>
   </div>
 
-  <div class="row reveal" id="decisao-1">
-    <h3>Cada prova em um único lugar</h3>
+  <div class="row reveal" id="ciclo">
+    <h3>Ciclo de vida da avaliação</h3>
     <div class="body">
-      <p>Reorganizamos o produto em torno da avaliação. Ela tem três abas, na ordem em que o trabalho costuma acontecer, mas sem obrigar essa sequência. O time pedagógico pode começar a montagem antes de a configuração estar completa.</p>
-      <p>Configuração e jornada são consideradas concluídas quando os campos obrigatórios estão preenchidos. Já a montagem só é concluída quando alguém clica em "Concluir composição". <b>Uma prova completa não é necessariamente uma prova revisada</b>, e essa ação deixa isso explícito.</p>
-      <p>Na listagem, as provas em risco aparecem destacadas sem precisar de filtro. O critério combina aplicação nas próximas duas semanas, alguma aba incompleta e público externo.</p>
+      <p>Antes das telas, o ciclo de vida foi mapeado estado por estado: o que cada aba mostra, quais botões ficam disponíveis e o que acontece quando a prova avança ou volta. Esse mapa virou referência comum para design e engenharia.</p>
     </div>
   </div>
-  <div class="narrow" style="max-width:1180px">
-    <figure class="fig fig-wide reveal" data-cmp>
-      <div class="cmp-tabs" role="group" aria-label="Comparar listagem"><button type="button" aria-pressed="false" data-side="a">Antes</button><button type="button" aria-pressed="true" data-side="b">Depois</button></div>
-      <div class="cmp-stack">
-        <button class="frame crop" type="button" data-zoom data-side="a" data-off><img width="1440" height="723" src="/assets/media/antes-listagem.webp" alt="Listagem da ferramenta antiga com nome, nível, aplicação, questões e status" loading="lazy"></button>
-        <button class="frame crop" type="button" data-zoom data-side="b"><img width="2000" height="1288" src="/assets/media/depois-listagem-atencao.webp" alt="Nova listagem com ID, público-alvo, status por aba e uma avaliação destacada em atenção" loading="lazy"></button>
-      </div>
-      <figcaption class="cmp-cap"><span data-side="a" data-off><b>Antes.</b> Nome, nível, aplicação e um status único. Sem ID, sem estado das etapas e sem sinal de risco.</span><span data-side="b"><b>Depois.</b> ID, público-alvo e o status de cada aba. O filtro "Avaliações em atenção" isola o que já nasce destacado.</span></figcaption>
-    </figure>
-    <figure class="fig fig-wide reveal">
-      <div class="frame video"><video src="/assets/media/ga-criar-avaliacao.mp4" poster="/assets/media/ga-criar-avaliacao.jpg" muted loop playsinline preload="none" controls aria-label="Criação de uma avaliação na nova Gestora"></video></div>
-      <figcaption>Criação de uma avaliação: o mínimo para começar, com as abas e o status visíveis desde o início.</figcaption>
-    </figure>
+  <div class="section-wide reveal">
+    <figure class="fig fig-wide"><button class="frame" type="button" data-zoom><img width="3200" height="777" src="/assets/media/ciclo-fluxo.webp" alt="Mapa do ciclo de vida da avaliação com estados, transições e regras" loading="lazy"></button><figcaption><b>Fluxo completo.</b> Estados, transições e regras de bloqueio da composição. Clique para ampliar.</figcaption></figure>
+    <figure class="fig fig-wide"><div class="strip" tabindex="0" aria-label="Documentação de status, role para o lado"><img width="9454" height="900" src="/assets/media/ciclo-status.webp" alt="Documentação de cada status: quando ocorre, estado das abas e botões disponíveis" loading="lazy"></div><figcaption><b>Status um a um.</b> Quando cada status ocorre, o estado das abas e os botões disponíveis. Role para o lado.</figcaption></figure>
   </div>
 
-  <div class="row reveal" id="decisao-2">
-    <h3>Um resumo todo verde não garante uma prova correta</h3>
+  <div class="row reveal" id="features">
+    <h3>O que mudou</h3>
     <div class="body">
-      <p>A tabela da composição passou a mostrar os metadados pedagógicos de cada item, o que permite conferir a prova contra o PDF sem sair da tela.</p>
-      <p>A montagem tem dois modos. Com a organização por blocos ligada, o sistema posiciona cada item pela disciplina e pelo tipo. Com ela desligada, a pessoa organiza os itens livremente e o resumo conta apenas por disciplina.</p>
-      <p>Ao desenhar os cenários de validação, identifiquei que, no modo livre, <b>o resumo podia ficar inteiro verde com a prova errada.</b> Um item podia ter a disciplina certa e o tipo errado. A demonstração abaixo mostra esse caso.</p>
+      <p>Cada mudança abaixo responde a uma dor do discovery. Quando existia uma tela equivalente na ferramenta antiga, arraste a linha para comparar.</p>
     </div>
   </div>
-  <div class="narrow" style="max-width:1180px">
-    <figure class="fig fig-wide reveal" data-cmp>
-      <div class="cmp-tabs" role="group" aria-label="Comparar composição"><button type="button" aria-pressed="false" data-side="a">Antes</button><button type="button" aria-pressed="true" data-side="b">Depois</button></div>
-      <div class="cmp-stack">
-        <button class="frame crop" type="button" data-zoom data-side="a" data-off><img width="1440" height="723" src="/assets/media/antes-composicao.webp" alt="Composição antiga com cards de item mostrando só disciplina, assunto e enunciado truncado" loading="lazy"></button>
-        <button class="frame crop" type="button" data-zoom data-side="b"><img width="2000" height="2424" src="/assets/media/depois-composicao-tabela.webp" alt="Nova composição em tabela com ID, disciplina, tipo, assunto, dificuldade, gabarito e BNCC" loading="lazy"></button>
-      </div>
-      <figcaption class="cmp-cap"><span data-side="a" data-off><b>Antes.</b> O card mostrava disciplina, assunto e o começo do enunciado. ID, gabarito, dificuldade e tipo ficavam escondidos.</span><span data-side="b"><b>Depois.</b> Uma tabela com ID, tipo, assunto, dificuldade, gabarito e BNCC visíveis.</span></figcaption>
-    </figure>
-  </div>
-  <div class="row reveal">
-    <span></span>
-    <div class="body">
-      <div class="demo">
-        <div class="demo-top">
-          <span class="px">Caderno 1 · Linguagens · exemplo</span>
-          <button class="switch" id="modeSwitch" role="switch" aria-checked="false" type="button"><span class="track"><span class="knob"></span></span><span id="modeLabel">Organizar por blocos: desligado</span></button>
+  <div class="section-wide">
+    <div class="features">
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Listagem que mostra o que precisa de atenção</h3>
+          <p>A listagem ganhou ID, público-alvo e o status de cada aba. Provas com aplicação nas próximas duas semanas, alguma aba incompleta e público externo já aparecem destacadas, sem precisar de filtro.</p>
         </div>
-        <div class="demo-grid">
-          <div class="demo-table"><table><thead><tr><th>#</th><th>Disciplina</th><th>Tipo</th><th>Gab.</th><th>Dif.</th><th>Validação</th></tr></thead><tbody id="demoRows"></tbody></table></div>
-          <div class="resumo" id="resumo" aria-live="polite"></div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-listagem-antes.webp" alt="Listagem antiga" loading="lazy"><img class="after" src="/assets/media/par-listagem-depois.webp" alt="Nova listagem com avaliações em atenção" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da listagem"></div>
+          <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1301" src="/assets/media/nova-06.webp" alt="Listagem com tooltips explicando cada alerta" loading="lazy"></button><figcaption>Tooltips explicam cada alerta, como itens pendentes de revisão ou aplicação próxima.</figcaption></figure>
         </div>
-        <p class="demo-note" id="demoNote"></p>
-      </div>
-      <div class="note"><span class="k">Impacto na especificação</span><p>Esse achado virou requisito para a engenharia: a contagem no resumo e a checagem de tipo em cada linha passaram a ser validações independentes. Ele respondia diretamente a chamados de provas cadastradas com o tipo de item errado.</p></div>
-    </div>
-  </div>
+      </article>
 
-  <div class="row reveal" id="decisao-3">
-    <h3>Avisar em vez de bloquear</h3>
-    <div class="body">
-      <p>Itens desatualizados, anulados ou fora da estrutura geram uma pendência, mas nenhuma pendência impede a conclusão da montagem. Quando o sistema bloqueia sem oferecer saída, as pessoas resolvem o problema fora dele. A decisão fica com quem conhece a prova.</p>
-      <p>Mantivemos travas apenas onde o erro é caro e difícil de desfazer: liberar uma prova de teste para escolas reais, usar um método de resultado incompatível ou editar uma prova que já está em aplicação.</p>
-    </div>
-  </div>
-  <div class="narrow" style="max-width:1180px">
-    <figure class="fig fig-wide reveal" data-cmp>
-      <div class="cmp-tabs" role="group" aria-label="Comparar tratamento de erros"><button type="button" aria-pressed="false" data-side="a">Antes</button><button type="button" aria-pressed="true" data-side="b">Depois</button></div>
-      <div class="cmp-stack">
-        <button class="frame crop" type="button" data-zoom data-side="a" data-off><img width="1440" height="723" src="/assets/media/antes-erro-generico.webp" alt="Composição antiga após um item ser recusado sem indicação de qual" loading="lazy"></button>
-        <button class="frame crop" type="button" data-zoom data-side="b"><img width="2000" height="1909" src="/assets/media/depois-pendencias.webp" alt="Nova composição com pendências Fora da estrutura, Tipo incompatível, Desatualizado e Anulado marcadas em cada linha" loading="lazy"></button>
-      </div>
-      <figcaption class="cmp-cap"><span data-side="a" data-off><b>Antes.</b> O item incompatível simplesmente não entrava, e um aviso temporário não dizia qual era.</span><span data-side="b"><b>Depois.</b> O item entra, e a pendência fica marcada na própria linha, com o motivo.</span></figcaption>
-    </figure>
-  </div>
-  <div class="row reveal">
-    <span></span>
-    <div class="body">
-      <div class="quote"><p>A reunião havia definido que pendências seriam apenas avisos, mas um protótipo anterior ainda bloqueava a conclusão. Identifiquei a divergência conferindo o arquivo, e não só a ata, e corrigimos antes do handoff.</p><span>Bastidor</span></div>
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Tudo da prova na mesma tela</h3>
+          <p>Configuração, jornada e composição viraram abas de uma única tela, cada uma com seu status. O salvamento é automático, com o estado no topo, em vez de um botão de salvar por seção.</p>
+        </div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-configuracao-antes.webp" alt="Tela separada de configuração na ferramenta antiga" loading="lazy"><img class="after" src="/assets/media/par-configuracao-depois.webp" alt="Configuração como aba da nova avaliação" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da configuração"></div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s dark">Novo</span></div>
+          <h3>Resumo sempre visível</h3>
+          <p>Um painel lateral mostra o estado da prova enquanto a pessoa trabalha: o que falta na configuração, as datas da jornada e o progresso de cada caderno por disciplina. O operacional e o pedagógico passam a ver o mesmo quadro.</p>
+        </div>
+        <div class="feature-media">
+          <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1687" src="/assets/media/nova-08.webp" alt="Configuração com o painel Resumo aberto" loading="lazy"></button></figure>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Estrutura de cadernos como etapa própria</h3>
+          <p>Antes, a estrutura da prova ficava misturada ao formulário de criação. Agora ela é um componente próprio, com cadernos, disciplinas, tipos e blocos de optativas. Separar o que a prova deve ter do que ela tem é o que permite validar uma contra a outra.</p>
+        </div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-estrutura-antes.webp" alt="Estrutura no formulário antigo" loading="lazy"><img class="after" src="/assets/media/par-estrutura-depois.webp" alt="Nova estrutura de cadernos" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da estrutura de cadernos"></div>
+          <div class="duo">
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="3464" src="/assets/media/nova-12.webp" alt="Estrutura com livre inclusão ativada" loading="lazy"></button><figcaption><b>Livre inclusão.</b> Para provas fora do padrão, com aviso de que a validação por disciplina fica desativada.</figcaption></figure>
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="2905" src="/assets/media/nova-13.webp" alt="Estrutura bloqueada depois do agendamento" loading="lazy"></button><figcaption><b>Estrutura bloqueada.</b> Depois do agendamento, só o tempo de execução pode mudar.</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Composição em tabela, com o que importa à vista</h3>
+          <p>Os cards deram lugar a uma tabela com ID, disciplina, tipo, assunto, dificuldade, gabarito e BNCC. Com isso, a conferência contra o PDF acontece dentro da composição, sem abrir item por item.</p>
+        </div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-composicao-antes.webp" alt="Composição antiga em cards" loading="lazy"><img class="after" src="/assets/media/par-composicao-depois.webp" alt="Nova composição em tabela" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da composição"></div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Pendências que avisam sem travar</h3>
+          <p>Antes, um item incompatível simplesmente não entrava, e o aviso não dizia qual era. Agora o item entra e a pendência fica marcada na própria linha, com o motivo: fora da estrutura, tipo incompatível, desatualizado ou anulado. Nenhuma delas impede a conclusão. Quem conhece a prova decide.</p>
+        </div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-pendencias-antes.webp" alt="Composição antiga depois de um item recusado" loading="lazy"><img class="after" src="/assets/media/par-pendencias-depois.webp" alt="Nova composição com pendências por linha" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do tratamento de erros"></div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s dark">Novo</span></div>
+          <h3>Duas validações independentes</h3>
+          <p>Ao desenhar os cenários de validação, identifiquei que a contagem de itens podia estar completa com a prova errada: um item com a disciplina certa e o tipo errado passava despercebido. Por isso a quantidade é conferida no resumo e o tipo é conferido em cada linha, de forma separada. Esse achado virou requisito para a engenharia.</p>
+        </div>
+        <div class="feature-media">
+          <div class="duo">
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="2741" src="/assets/media/nova-16.webp" alt="Composição agrupada por blocos com itens fora da estrutura" loading="lazy"></button><figcaption>Composição agrupada por disciplina e tipo, com o item fora da estrutura sinalizado.</figcaption></figure>
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1630" src="/assets/media/nova-17.webp" alt="Painel Resumo aberto com progresso por disciplina" loading="lazy"></button><figcaption>O resumo confere a quantidade por caderno e disciplina.</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Antes e depois</span></div>
+          <h3>Jornada inteira à vista, com travas</h3>
+          <p>A jornada deixou de ser editada em gavetas, uma seção por vez. Distribuição, cronograma, liberação de resultados e documentos ficam no mesmo formulário. Depois do agendamento, os campos que não podem mudar ficam bloqueados.</p>
+        </div>
+        <div class="feature-media">
+          <div class="slider"><img src="/assets/media/par-jornada-antes.webp" alt="Jornada antiga em modo leitura" loading="lazy"><img class="after" src="/assets/media/par-jornada-depois.webp" alt="Nova jornada preenchida" loading="lazy"><span class="handle"></span><span class="lbl a">Antes</span><span class="lbl b">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da jornada"></div>
+          <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="3072" src="/assets/media/nova-10.webp" alt="Jornada bloqueada durante o agendamento" loading="lazy"></button><figcaption>Jornada bloqueada enquanto a prova está em agendamento.</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s dark">Novo</span></div>
+          <h3>Contexto compartilhado</h3>
+          <p>Necessário para a prova nacional inspirada no PISA. Vários itens ligados ao mesmo texto-base precisam ficar juntos e em sequência. O sistema identifica esses itens e avisa quando algum sai de ordem.</p>
+        </div>
+        <div class="feature-media">
+          <div class="duo">
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1171" src="/assets/media/nova-19.webp" alt="Composição com alerta de item fora de ordem" loading="lazy"></button><figcaption>Alerta de item fora de ordem na própria linha.</figcaption></figure>
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="1536" height="1664" src="/assets/media/nova-20.webp" alt="Modal de inconsistências listando itens fora de ordem" loading="lazy"></button><figcaption>As inconsistências reunidas em um só lugar.</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s dark">Novo</span></div>
+          <h3>Múltiplas afirmações</h3>
+          <p>Um novo tipo de item, com várias afirmações sobre o mesmo contexto, identificado na composição pelo ícone e pelo tipo.</p>
+        </div>
+        <div class="feature-media">
+          <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1139" src="/assets/media/nova-21.webp" alt="Composição com item de múltiplas afirmações" loading="lazy"></button></figure>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s dark">Novo</span></div>
+          <h3>Duplicar avaliação</h3>
+          <p>65% das provas eram recriadas a partir de outra, somando cerca de 361 horas de trabalho manual por ano. A cópia traz configuração e composição e deixa as datas em branco de propósito, para ninguém herdar uma agenda errada.</p>
+        </div>
+        <div class="feature-media">
+          <div class="duo">
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1650" src="/assets/media/nova-22.webp" alt="Modal de duplicar avaliação" loading="lazy"></button><figcaption>O modal explica o que é copiado e o que precisa ser preenchido.</figcaption></figure>
+            <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="3042" src="/assets/media/nova-23.webp" alt="Jornada da cópia com datas em branco" loading="lazy"></button><figcaption>Na cópia, o cronograma chega vazio.</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-text">
+          <div class="kind"><span class="chip-s">Em andamento</span></div>
+          <h3>Lote logístico</h3>
+          <p>Um lote errado ou atrasado pode gerar frete aéreo emergencial. A geração dos lotes passa a ter uma tela própria, com status e data de cada um.</p>
+        </div>
+        <div class="feature-media">
+          <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1288" src="/assets/media/nova-24.webp" alt="Tela de lote logístico com status e data de geração" loading="lazy"></button></figure>
+        </div>
+      </article>
+
     </div>
   </div>
 
   <div class="row reveal" id="ia">
     <h3>IA no processo</h3>
     <div class="body">
-      <p>Usei IA principalmente para organizar as decisões das reuniões em um documento estruturado. Esse documento serviu de base para o protótipo de demonstração no Figma Make.</p>
-      <p>O protótipo reunia 4 microinterações gravadas em vídeo, sem texto de apoio. A última alterna o modo da montagem e mostra, ao vivo, o resumo verde escondendo um erro.</p>
+      <p>Usei IA principalmente para organizar as decisões das reuniões em um documento estruturado. Esse documento serviu de base para o protótipo de demonstração no Figma Make, que mostrava o comportamento da ferramenta em vídeo, sem texto de apoio.</p>
       <p>Também construí um protótipo em HTML com os 5 estados do resumo e 6 cenários de validação com dados reais, do caso ideal ao pior caso com dois erros simultâneos. Design e engenharia trabalharam a partir dos mesmos cenários.</p>
     </div>
   </div>
@@ -210,19 +357,10 @@
     <h3>Lançamento</h3>
     <div class="body">
       <p>Não houve uma fase formal de piloto. A ferramenta foi liberada para todos com um recorte: as provas do ano seguinte nascem na ferramenta nova, e quase todas do ano corrente continuam na antiga. Isso protegeu as provas em andamento.</p>
-      <p>Os primeiros testes reais foram a criação de 1.500 provas por importação e a montagem da prova nacional com cerca de 10 mil alunos, possível graças ao novo modelo de texto-base compartilhado.</p>
-      <p>O lançamento também revelou fluxos que o sistema antigo sustentava sem documentação, como a ordem das disciplinas na impressão e extrações usadas por outros times. Além disso, a troca de modo chegou a desfazer uma montagem inteira. Depois do lançamento, criei um mapa de fluxos e condicionais para registrar essas regras e priorizar as correções.</p>
+      <p>Os primeiros testes reais foram a criação de 1.500 provas por importação e a montagem da prova nacional com cerca de 10 mil alunos, possível graças ao contexto compartilhado.</p>
+      <p>O lançamento também revelou fluxos que o sistema antigo sustentava sem documentação, como a ordem das disciplinas na impressão e extrações usadas por outros times. Depois do lançamento, criei um mapa de fluxos e condicionais para registrar essas regras e priorizar as correções.</p>
+      <div class="quote"><p>"Parabéns, entrega enorme! Time de conteúdo muito feliz com a nova gestora de avaliações."</p><span>Liderança de conteúdo</span></div>
     </div>
-  </div>
-  <div class="narrow" style="max-width:1180px">
-    <div class="duo fig-wide reveal">
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1171" src="/assets/media/contexto-compartilhado.webp" alt="Composição com itens de contexto compartilhado e alerta de item fora de ordem" loading="lazy"></button><figcaption><b>Contexto compartilhado.</b> Itens do mesmo texto-base precisam ficar em sequência, e o sistema avisa quando um sai de ordem.</figcaption></figure>
-      <figure class="fig"><button class="frame crop" type="button" data-zoom><img width="2000" height="1650" src="/assets/media/duplicar.webp" alt="Modal de duplicar avaliação explicando o que é copiado e o que precisa ser preenchido" loading="lazy"></button><figcaption><b>Duplicação.</b> 65% das provas eram recriadas a partir de outra. A cópia traz configuração e composição e deixa as datas em branco de propósito.</figcaption></figure>
-    </div>
-  </div>
-  <div class="row reveal">
-    <span></span>
-    <div class="body"><div class="quote"><p>"Parabéns, entrega enorme! Time de conteúdo muito feliz com a nova gestora de avaliações."</p><span>Liderança de conteúdo</span></div></div>
   </div>
 
   <div class="row reveal" id="aprendizados">

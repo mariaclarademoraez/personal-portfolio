@@ -153,3 +153,49 @@
     run();
   }
 })();
+
+/* ---- v2: slider antes/depois e carrossel ---- */
+(function () {
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  $$('.slider').forEach(function (sl) {
+    var input = sl.querySelector('input[type=range]');
+    var set = function (v) { sl.style.setProperty('--pos', v + '%'); };
+    input.addEventListener('input', function () { set(input.value); });
+    var drag = false;
+    var move = function (e) {
+      var r = sl.getBoundingClientRect();
+      var x = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) / r.width * 100;
+      x = Math.max(0, Math.min(100, x)); input.value = x; set(x);
+    };
+    sl.addEventListener('pointerdown', function (e) { drag = true; move(e); });
+    addEventListener('pointermove', function (e) { if (drag) move(e); });
+    addEventListener('pointerup', function () { drag = false; });
+    set(input.value);
+  });
+
+  $$('.carousel').forEach(function (c) {
+    var track = c.querySelector('.car-track'), slides = $$('.car-slide', c);
+    var prev = c.querySelector('[data-prev]'), next = c.querySelector('[data-next]');
+    var count = c.querySelector('.car-count'), dotsBox = c.querySelector('.car-dots');
+    var dots = slides.map(function (s, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Ir para a tela ' + (i + 1));
+      b.addEventListener('click', function () { go(i); }); dotsBox.appendChild(b); return b;
+    });
+    var current = 0;
+    function go(i) { i = Math.max(0, Math.min(slides.length - 1, i)); track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: 'smooth' }); }
+    function sync() {
+      var x = track.scrollLeft, best = 0, d = Infinity;
+      slides.forEach(function (s, i) { var dd = Math.abs(s.offsetLeft - track.offsetLeft - x); if (dd < d) { d = dd; best = i; } });
+      current = best;
+      count.textContent = (best + 1) + ' / ' + slides.length;
+      dots.forEach(function (b, i) { b.setAttribute('aria-current', String(i === best)); });
+      prev.disabled = best === 0; next.disabled = best === slides.length - 1;
+    }
+    prev.addEventListener('click', function () { go(current - 1); });
+    next.addEventListener('click', function () { go(current + 1); });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); }, { passive: true });
+    track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); } });
+    sync();
+  });
+})();
