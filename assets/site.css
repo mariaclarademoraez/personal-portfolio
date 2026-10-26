@@ -364,3 +364,5 @@ tr.flag td { background: repeating-linear-gradient(45deg, #F0F0F0 0 3px, transpa
   .strip img { height: 300px; }
   .car-dots { display: none; }
 }
+.muted-note { color: var(--muted); font-size: 14px !important; border-left: 2px solid var(--line); padding-left: 12px; }
+.row .body .kind { display: flex; }
