@@ -55,22 +55,14 @@
     <a class="scroll-cue" href="#intro" aria-label="Ler o case"><svg class="ico" style="width:22px;height:22px"><use href="#i-down"/></svg></a>
   </section>
 
-  <div class="narrow rise d3" style="max-width:1180px">
-    <div class="raio case-hero-media" style="box-shadow:0 40px 80px -40px rgba(0,0,0,.3), 0 0 0 1px rgba(0,0,0,.05)">
-      <div class="mock-top">
-        <label class="px" for="raioQ" style="font-size:12px;color:var(--muted)">Tema</label>
-        <input id="raioQ" class="field" type="text" value="Como professores revisam provas antes de imprimir" readonly style="font:inherit;font-size:14px">
-        <button class="raio-run" id="raioRun" type="button">Já sabemos isso?</button>
-      </div>
-      <div class="raio-out" id="raioOut" aria-live="polite"></div>
-      <p class="raio-foot">Exemplo com dados fictícios. Na ferramenta, cada linha leva ao documento de origem.</p>
-    </div>
+  <div class="case-hero-media rise d3">
+    <img src="/sabioteca/m/sab-inicio.webp" width="1600" height="1213" alt="Tela inicial da sabioteca: visão geral das pesquisas, atualizadas recentemente e próximas entrevistas">
   </div>
 
   <section class="intro" id="intro">
     <div class="intro-in reveal">
       <h2>sabioteca</h2>
-      <p class="lead">As pesquisas do time estavam espalhadas entre pastas, canais e cards. A sabioteca <b>reúne esse material e responde se um tema já foi pesquisado</b> antes de alguém começar do zero. O projeto está em andamento, e este case será atualizado.</p>
+      <p class="lead">As pesquisas do time de produto do CMS estavam espalhadas entre pastas, canais e cards. A sabioteca é um app que <b>lê tudo direto do Drive, cruza com Slack, Linear, Metabase e a agenda de entrevistas</b> e responde, com fonte, se um tema já foi pesquisado antes de alguém começar do zero.</p>
     </div>
   </section>
 
@@ -82,8 +74,10 @@
       <div class="meta-item"><svg class="ico"><use href="#i-cal"/></svg><div><h4>Período</h4><p>Outubro de 2026 · em andamento</p></div></div>
       <div class="meta-item"><svg class="ico"><use href="#i-target"/></svg><div><h4>Até agora</h4>
         <div class="stats">
-          <div class="stat"><svg class="ico"><use href="#i-link"/></svg><b>5</b><span class="k">Ferramentas conectadas</span><span class="d">Drive, agenda, chat, tarefas e dados de uso.</span></div>
+          <div class="stat"><svg class="ico"><use href="#i-link"/></svg><b>5</b><span class="k">Ferramentas conectadas</span><span class="d">Drive, agenda de entrevistas, Slack, Linear e Metabase.</span></div>
           <div class="stat"><svg class="ico"><use href="#i-cal"/></svg><b>11 dias</b><span class="k">Até a primeira versão</span><span class="d">Do primeiro pedido à versão com controle de versão.</span></div>
+          <div class="stat"><svg class="ico"><use href="#i-doc"/></svg><b>7</b><span class="k">Pesquisas organizadas</span><span class="d">Com ID, status, squad e resumo, lidas da pasta do time.</span></div>
+          <div class="stat"><svg class="ico"><use href="#i-people"/></svg><b>38</b><span class="k">Participantes mapeados</span><span class="d">A partir das entrevistas vinculadas na agenda.</span></div>
         </div>
       </div></div>
     </div>
@@ -126,20 +120,71 @@
   </div>
 
   <div class="row reveal">
-    <h3>Como funciona</h3>
+    <h3>Início</h3>
     <div class="body">
-      <p>Repetir uma pesquisa que já foi feita é um dos custos mais altos em research ops. Por isso, o primeiro passo para criar um plano é um raio-x do tema, como o do topo desta página, com a fonte de cada informação.</p>
-      <p>Cada pesquisa também tem um resumo gerado uma única vez e salvo para todos, que só é atualizado quando algum documento muda. As transcrições das entrevistas são importadas para a pasta da pesquisa, e os planos novos são salvos no drive como cópia do template. O controle de versão registra cada mudança e permite restaurar versões anteriores.</p>
+      <p>A tela inicial mostra o estado das pesquisas sem ninguém precisar abrir o Drive: quantas estão iniciadas, planejadas e finalizadas, o que mudou por último e as próximas entrevistas da agenda do time. Tudo é lido da pasta de pesquisas e atualizado sob demanda.</p>
     </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Pesquisas</h3>
+    <div class="body">
+      <p>Cada pesquisa ganha um ID, como PQ-008, para continuar fácil de achar mesmo quando times e produtos mudam de nome. A lista filtra por status e squad, e o status pode ser trocado ali mesmo.</p>
+      <p>Ao abrir uma pesquisa, o painel lateral traz o <b>resumão</b>: objetivo, método e o que já se sabe, gerado uma vez e salvo para todos. Dali dá para abrir a pasta no Drive ou importar as transcrições das entrevistas.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-pesquisas.webp" alt="Lista de pesquisas com ID, status, squad e datas" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-painel.webp" alt="Painel lateral de uma pesquisa com status, squad, pasta e resumão" loading="lazy"></button></figure></div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Nova pesquisa</h3>
+    <div class="body">
+      <p>Repetir uma pesquisa que já foi feita é um dos custos mais altos em research ops. Por isso, criar um plano <b>começa pelo raio-x "Já sabemos isso?"</b>: a pessoa escreve a pergunta, e a sabioteca cruza pesquisas no Drive, conversas no Slack, projetos no Linear, dados do Metabase e a agenda de entrevistas antes de qualquer formulário.</p>
+      <p>Depois vêm três etapas curtas: contexto, método e amostra, e revisão. O plano segue o template oficial, e o original nunca é alterado: o app cria uma pasta e um documento novos. Os responsáveis são sugeridos a partir da planilha de times, com a squad do plano primeiro.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-raiox.webp" alt="Etapa Já sabemos isso? com o campo de pergunta e o botão Fazer raio-x" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-contexto.webp" alt="Etapa de contexto da nova pesquisa com nome, squad, responsáveis e objetivo" loading="lazy"></button></figure></div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Chat</h3>
+    <div class="body">
+      <p>Para perguntas rápidas, o chat busca nas pesquisas, documentos e conversas do CMS. Cada resposta traz as fontes, para a pessoa conferir direto na documentação, e dá para ligar ou desligar cada fonte ou pedir um raio-x completo.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <figure class="fig"><div class="frame still"><img width="1600" height="1213" src="/sabioteca/m/sab-chat.webp" alt="Chat da sabioteca com seletor de fontes: Drive, Agenda, Slack, Linear e Metabase" loading="lazy"></div></figure>
+  </div>
+
+  <div class="row reveal">
+    <h3>Recrutamento</h3>
+    <div class="body">
+      <p>Uma aba restrita aos proprietários, ainda em construção, mostra quem já participou das pesquisas, a partir das entrevistas vinculadas na agenda. Para cada pessoa aparecem cargo, marca, área, participações e as squads que já falaram com ela, o que ajuda a não chamar sempre as mesmas pessoas.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-recrutamento.webp" alt="Aba Recrutamento com participantes, marca, área e participações" loading="lazy"></button><figcaption>Nomes e e-mails borrados para preservar os participantes.</figcaption></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-pessoa.webp" alt="Detalhe de uma participante com cargo, marca, área e histórico de participações" loading="lazy"></button></figure></div>
   </div>
 
   <div class="row reveal">
     <h3>Cuidados</h3>
     <div class="body">
-      <p><b>Participantes nunca são citados pelo nome.</b> Quem aceitou participar de uma pesquisa não aceitou ser mencionado em qualquer conversa, então as respostas usam apenas cargo e área.</p>
+      <p><b>Participantes não aparecem nas respostas.</b> Quem aceitou participar de uma pesquisa não aceitou ser citado em qualquer conversa, então o chat e o raio-x usam apenas cargo e área. Os nomes ficam só na aba de recrutamento, visível para proprietários.</p>
       <p><b>Só a transcrição, sem resumo automático.</b> O resumo da ferramenta de reunião pode enviesar a leitura.</p>
       <p><b>Custo como decisão de design.</b> Cada uso consome o plano de quem está usando, então o modelo mais robusto fica reservado ao raio-x e à geração de planos.</p>
     </div>
+  </div>
+
+  <div class="row reveal">
+    <h3>Para o time adotar</h3>
+    <div class="body">
+      <p>A ferramenta explica a si mesma numa página Sobre, em formato de perguntas frequentes, e tem um botão de feedback em todas as telas. Os proprietários acompanham as respostas e o controle de versão, que registra cada mudança e permite restaurar versões anteriores.</p>
+    </div>
+  </div>
+  <div class="section-wide reveal">
+    <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-sobre.webp" alt="Página Sobre a sabioteca com perguntas frequentes" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-feedback.webp" alt="Modal de feedback aberto na tela inicial" loading="lazy"></button></figure></div>
   </div>
 
   <div class="row reveal">
