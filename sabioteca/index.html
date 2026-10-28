@@ -56,7 +56,7 @@
   </section>
 
   <div class="case-hero-media rise d3">
-    <img src="/sabioteca/m/sab-inicio.webp" width="1600" height="1213" alt="Tela inicial da sabioteca: visão geral das pesquisas, atualizadas recentemente e próximas entrevistas">
+    <img src="/sabioteca/m/sab-capa.webp" width="2400" height="1500" alt="Telas da sabioteca: visão geral das pesquisas e o chat com seletor de fontes">
   </div>
 
   <section class="intro" id="intro">
@@ -66,8 +66,7 @@
     </div>
   </section>
 
-  <div class="row reveal">
-    <span></span>
+  <div class="row reveal meta-row">
     <div class="body meta">
       <div class="meta-item"><svg class="ico"><use href="#i-user"/></svg><div><h4>Meu papel</h4><p><b>Concepção, design e construção</b>, com o Claude e sem desenvolvedor.</p></div></div>
       <div class="meta-item"><svg class="ico"><use href="#i-team"/></svg><div><h4>Time</h4><p>Escopo definido com mais duas pessoas de design e produto.</p></div></div>
@@ -83,7 +82,7 @@
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="problema">
     <h3>Problema</h3>
     <div class="body">
       <p>Sínteses ficavam em uma pasta, transcrições em outra, decisões em canais de chat e o status das iniciativas em outra ferramenta. Como times e produtos mudam de nome com frequência, documentos antigos ficavam quase impossíveis de localizar.</p>
@@ -91,7 +90,7 @@
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="formato">
     <h3>Formato</h3>
     <div class="body">
       <p>O objetivo inicial era um chat fixo, acessível ao time por um link. O formato certo apareceu na terceira tentativa.</p>
@@ -104,7 +103,7 @@
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="escopo">
     <h3>Escopo</h3>
     <div class="body">
       <p>Ferramentas de IA tendem a acumular funções. Para evitar isso, fizemos uma matriz em grupo definindo o que a sabioteca é e o que ela não é.</p>
@@ -119,14 +118,14 @@
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="inicio">
     <h3>Início</h3>
     <div class="body">
       <p>A tela inicial mostra o estado das pesquisas sem ninguém precisar abrir o Drive: quantas estão iniciadas, planejadas e finalizadas, o que mudou por último e as próximas entrevistas da agenda do time. Tudo é lido da pasta de pesquisas e atualizado sob demanda.</p>
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="pesquisas">
     <h3>Pesquisas</h3>
     <div class="body">
       <p>Cada pesquisa ganha um ID, como PQ-008, para continuar fácil de achar mesmo quando times e produtos mudam de nome. A lista filtra por status e squad, e o status pode ser trocado ali mesmo.</p>
@@ -137,7 +136,7 @@
     <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-pesquisas.webp" alt="Lista de pesquisas com ID, status, squad e datas" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-painel.webp" alt="Painel lateral de uma pesquisa com status, squad, pasta e resumão" loading="lazy"></button></figure></div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="nova-pesquisa">
     <h3>Nova pesquisa</h3>
     <div class="body">
       <p>Repetir uma pesquisa que já foi feita é um dos custos mais altos em research ops. Por isso, criar um plano <b>começa pelo raio-x "Já sabemos isso?"</b>: a pessoa escreve a pergunta, e a sabioteca cruza pesquisas no Drive, conversas no Slack, projetos no Linear, dados do Metabase e a agenda de entrevistas antes de qualquer formulário.</p>
@@ -148,17 +147,17 @@
     <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-raiox.webp" alt="Etapa Já sabemos isso? com o campo de pergunta e o botão Fazer raio-x" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-contexto.webp" alt="Etapa de contexto da nova pesquisa com nome, squad, responsáveis e objetivo" loading="lazy"></button></figure></div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="chat">
     <h3>Chat</h3>
     <div class="body">
       <p>Para perguntas rápidas, o chat busca nas pesquisas, documentos e conversas do CMS. Cada resposta traz as fontes, para a pessoa conferir direto na documentação, e dá para ligar ou desligar cada fonte ou pedir um raio-x completo.</p>
     </div>
   </div>
   <div class="section-wide reveal">
-    <figure class="fig"><div class="frame still"><img width="1600" height="1213" src="/sabioteca/m/sab-chat.webp" alt="Chat da sabioteca com seletor de fontes: Drive, Agenda, Slack, Linear e Metabase" loading="lazy"></div></figure>
+    <figure class="fig fig-wide"><div class="frame still"><img width="1600" height="1213" src="/sabioteca/m/sab-chat.webp" alt="Chat da sabioteca com seletor de fontes: Drive, Agenda, Slack, Linear e Metabase" loading="lazy"></div></figure>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="recrutamento">
     <h3>Recrutamento</h3>
     <div class="body">
       <p>Uma aba restrita aos proprietários, ainda em construção, mostra quem já participou das pesquisas, a partir das entrevistas vinculadas na agenda. Para cada pessoa aparecem cargo, marca, área, participações e as squads que já falaram com ela, o que ajuda a não chamar sempre as mesmas pessoas.</p>
@@ -168,7 +167,7 @@
     <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-recrutamento.webp" alt="Aba Recrutamento com participantes, marca, área e participações" loading="lazy"></button><figcaption>Nomes e e-mails borrados para preservar os participantes.</figcaption></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-pessoa.webp" alt="Detalhe de uma participante com cargo, marca, área e histórico de participações" loading="lazy"></button></figure></div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="cuidados">
     <h3>Cuidados</h3>
     <div class="body">
       <p><b>Participantes não aparecem nas respostas.</b> Quem aceitou participar de uma pesquisa não aceitou ser citado em qualquer conversa, então o chat e o raio-x usam apenas cargo e área. Os nomes ficam só na aba de recrutamento, visível para proprietários.</p>
@@ -177,7 +176,7 @@
     </div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="adocao">
     <h3>Para o time adotar</h3>
     <div class="body">
       <p>A ferramenta explica a si mesma numa página Sobre, em formato de perguntas frequentes, e tem um botão de feedback em todas as telas. Os proprietários acompanham as respostas e o controle de versão, que registra cada mudança e permite restaurar versões anteriores.</p>
@@ -187,7 +186,7 @@
     <div class="duo fig-wide"><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-sobre.webp" alt="Página Sobre a sabioteca com perguntas frequentes" loading="lazy"></button></figure><figure class="fig"><button class="frame" type="button" data-zoom><img width="1600" height="1213" src="/sabioteca/m/sab-feedback.webp" alt="Modal de feedback aberto na tela inicial" loading="lazy"></button></figure></div>
   </div>
 
-  <div class="row reveal">
+  <div class="row reveal" id="proximos">
     <h3>Próximos passos</h3>
     <div class="body">
       <p>A matriz foi definida depois de boa parte da construção, e algumas funções foram além do combinado. O raio-x mostra lacunas, que podem ser lidas como sugestão de tema, e o chat às vezes apresenta interpretações. Estou alinhando esses pontos com o time.</p>
